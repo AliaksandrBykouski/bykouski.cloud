@@ -14,9 +14,7 @@ export default async function Hero({ locale }: { locale: string }) {
         <h2 className="mt-8 text-xl font-bold leading-tight text-foreground md:text-5xl">
           {t("hero.role")}
         </h2>
-        <p className="mt-8 font-light text-xl text-muted-foreground">
-          {t("hero.description")}
-        </p>
+        <p className="mt-8 font-light text-xl text-muted-foreground">{t("hero.description")}</p>
         <Button asChild className="mt-10" style={{ background: "var(--ring" }}>
           <Link href="/contacts">{t("hero.contact")}</Link>
         </Button>

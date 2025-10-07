@@ -1,6 +1,5 @@
 "use client";
 
-import { z } from "zod";
 import Link from "next/link";
 import { toast } from "sonner";
 import { SubmitHandler, useForm } from "react-hook-form";
@@ -54,17 +53,10 @@ export default function ContactForm({
   return (
     <section className="relative isolate">
       <div className="relative">
-        <form
-          onSubmit={handleSubmit(onSubmit)}
-          className="mt-16 lg:flex-auto"
-          noValidate
-        >
+        <form onSubmit={handleSubmit(onSubmit)} className="mt-16 lg:flex-auto" noValidate>
           <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-8">
             <div>
-              <label
-                htmlFor="name"
-                className="block text-sm font-medium text-foreground mb-2"
-              >
+              <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
                 Name
               </label>
               <Input
@@ -88,10 +80,7 @@ export default function ContactForm({
               )}
             </div>
             <div>
-              <label
-                htmlFor="email"
-                className="block text-sm font-medium text-foreground mb-2"
-              >
+              <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
                 Email
               </label>
               <Input
@@ -116,10 +105,7 @@ export default function ContactForm({
             </div>
           </div>
           <div className="mt-8">
-            <label
-              htmlFor="message"
-              className="block text-sm font-medium text-foreground mb-2"
-            >
+            <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
               Message
             </label>
             <Textarea

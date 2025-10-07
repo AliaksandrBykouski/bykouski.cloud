@@ -4,8 +4,7 @@ import Head from "next/head";
 export async function generateMetadata() {
   return {
     metadataBase: new URL("https://bykouski.cloud"),
-    title:
-      "Tvorba webových stránek. Web development Czech Republic | Bykouski Aliaksandr",
+    title: "Tvorba webových stránek. Web development Czech Republic | Bykouski Aliaksandr",
     description:
       "Profesionální služby vývoje webových stránek na míru vašim potřebám. Specializuji se na Next.js, React, CSS a JavaScript pro vytváření moderních a responzivních webů.",
     keywords:
@@ -15,8 +14,7 @@ export async function generateMetadata() {
     publisher: "Aliaksandr Bykouski",
     openGraph: {
       title: "Web Studio Bykouski Aliaksandr",
-      description:
-        "Profesionální služby vývoje webových stránek na míru vašim potřebám.",
+      description: "Profesionální služby vývoje webových stránek na míru vašim potřebám.",
       url: "https://bykouski.cloud",
       siteName: "Web Studio Bykouski Aliaksandr",
       type: "website",
@@ -81,10 +79,7 @@ export default async function RootLayout({
         <meta name="ICBM" content="50.0755, 14.4378" />
 
         {/* Метатеги для локальных поисковых систем */}
-        <meta
-          name="seznam"
-          content="web development, tvorba webových stránek"
-        />
+        <meta name="seznam" content="web development, tvorba webových stránek" />
 
         {/* Социальные сети и мессенджеры популярные в Чехии */}
         <meta property="og:locale" content="cs_CZ" />
@@ -95,34 +90,20 @@ export default async function RootLayout({
 
         {/* Технические метатеги */}
         <link rel="icon" href="/favicon.ico" />
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/apple-touch-icon.png"
-        />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <meta name="apple-mobile-web-app-title" content="Web Studio Bykouski" />
         <link rel="manifest" href="/site.webmanifest" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
 
         {/* Дополнительные метатеги для бизнеса */}
-        <meta
-          name="business:contact_data:street_address"
-          content="Česká republika"
-        />
+        <meta name="business:contact_data:street_address" content="Česká republika" />
         <meta name="business:contact_data:locality" content="Prague" />
-        <meta
-          name="business:contact_data:country_name"
-          content="Czech Republic"
-        />
+        <meta name="business:contact_data:country_name" content="Czech Republic" />
         <meta name="format-detection" content="telephone=yes" />
 
         {/* Метатеги для ускорения загрузки */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin=""
-        />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link rel="dns-prefetch" href="//bykouski.cloud" />
       </Head>
       <body

@@ -14,7 +14,43 @@
     "contact": "Kontaktujte mě 🔗"
   },
   "services": {
-    "title": "Moje služby"
+    "title": "Moje služby",
+    "subtitle": "Rychlý, uživatelsky přívětivý a moderní vývoj pro vaše podnikání",
+    "footer": "Kontaktujte mě pro individuální nabídku"
+  },
+  "servicesCard": {
+    "1": {
+      "title": "Webový vývoj",
+      "content": "Vytváření responzivních a vysoce výkonných webových stránek pomocí moderních technologií."
+    },
+    "2": {
+      "title": "Vývoj aplikací",
+      "content": "Vývoj interaktivních webových aplikací, které poskytují vynikající uživatelský zážitek."
+    },
+    "3": {
+      "title": "Responzivní design",
+      "content": "Vytváření responzivních webových designů, které zajišťují správné zobrazení na různých zařízeních."
+    },
+    "4": {
+      "title": "Správa obsahu",
+      "content": "Vytváření a správa obsahu pro webové stránky, včetně textu, obrázků a multimédií."
+    },
+    "5": {
+      "title": "Technická podpora",
+      "content": "Zajištění bezproblémového provozu a aktualizací vašich webových stránek."
+    },
+    "6": {
+      "title": "SEO optimalizace",
+      "content": "Zvýšení viditelnosti vašeho webu ve vyhledávačích pro přilákání většího provozu."
+    },
+    "7": {
+      "title": "Optimalizace pro mobilní zařízení",
+      "content": "Optimalizace webových stránek pro mobilní zařízení, aby byl zajištěn nejlepší uživatelský zážitek."
+    },
+    "8": {
+      "title": "Individuální řešení",
+      "content": "Vytváření individuálních řešení pro jedinečné obchodní potřeby."
+    }
   },
   "contacts": {
     "title": "Kontaktujte mě",

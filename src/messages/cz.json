@@ -1,0 +1,37 @@
+{
+  "header": {
+    "home": "AB",
+    "services": "Služby",
+    "posts": "Blog",
+    "contacts": "Kontakty"
+  },
+  "title": "Aliaksandr Bykouski | Webový vývojář",
+  "description": "Ahoj! Jmenuji se Aliaksandr a jsem webový vývojář. Vytvářím krásné, rychlé a uživatelsky přívětivé webové stránky a aplikace.",
+  "hero": {
+    "hi": "Ahoj! Jmenuji se Aliaksandr 👋",
+    "role": "Webový vývojář, který miluje kód a design.",
+    "description": "Oživím vaše nápady a přetvořím je na uživatelsky přívětivé rozhraní. Technologie proměňuji v umění a pohodlí ve standard. Každý můj projekt pomáhá značkám být slyšet a fungovat efektivněji.",
+    "contact": "Kontaktujte mě 🔗"
+  },
+  "services": {
+    "title": "Moje služby"
+  },
+  "contacts": {
+    "title": "Kontaktujte mě",
+    "description": "Máte projekt nebo se jen chcete pozdravit? Mé dveře jsou vždy otevřené pro nové příležitosti a zajímavé rozhovory. Neváhejte mě kontaktovat prostřednictvím formuláře."
+  },
+  "NotFound": {
+    "title": "Jejda! Stránka nenalezena.",
+    "description": "Omlouváme se, nemohli jsme najít stránku, kterou hledáte.",
+    "backHome": "Zpět na hlavní stránku"
+  },
+  "form": {
+    "name": "Jožin z bažin",
+    "email": "jozin@zbazin.cz",
+    "message": "Ahoj, chtěl bych se zeptat na...",
+    "send": "Odeslat",
+    "success": "Děkuji! Vaše zpráva byla odeslána.",
+    "error": "Jejda! Něco se pokazilo. Zkuste to prosím znovu.",
+    "agreeToTerms": "Souhlasím s podmínkami a zásadami ochrany osobních údajů."
+  }
+}

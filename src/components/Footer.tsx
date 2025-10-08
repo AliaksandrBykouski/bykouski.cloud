@@ -2,7 +2,7 @@ import { navigation } from "@/lib/navlinks";
 
 export default function Footer() {
   return (
-    <footer className="row-start-3 flex gap-[24px]  items-center justify-center border-t border-border bg-background/80 px-4 py-6 text-sm text-muted-foreground backdrop-blur sm:justify-between">
+    <footer className="row-start-3 flex gap-[24px]  items-center justify-center border-t border-border border-[var(--ring)] bg-background/80 px-4 py-6 text-sm text-muted-foreground backdrop-blur sm:justify-between">
       <div className="container mx-auto max-w-3xl px-4 py-4">
         <div className="md:flex md:items-center md:justify-between">
           {/* Social links */}

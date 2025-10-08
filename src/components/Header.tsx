@@ -6,7 +6,7 @@ import { getTranslations } from "next-intl/server";
 export default async function Header({ locale }: { locale: string }) {
   const t = await getTranslations({ locale });
   return (
-    <header className="sticky top-0 z-50 max-w-[1400px] border-b-2 border-border bg-background/80 backdrop-blur">
+    <header className="sticky top-0 z-50 max-w-[1400px] border-b-2 border-border border-[var(--ring)] bg-background/80 backdrop-blur">
       <div className="container mx-auto flex max-w-[1400px] items-center justify-between px-4 py-4">
         <Link
           href="/"

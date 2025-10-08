@@ -30,5 +30,8 @@ jobs:
           host: ${{ secrets.PROD_SSH_HOST }}
           user: ${{ secrets.PROD_SSH_USERNAME }}
           private_key: ${{ secrets.PROD_SSH_PRIVATE_KEY }}
-          host_fingerprint: ${{ secrets.PROD_SSH_FINGERPRINT }}
-          command: source ~/.nvm/nvm.sh; ~/deploy.sh
+          # host_fingerprint: ${{ secrets.PROD_SSH_FINGERPRINT }} # Optional - uncomment if you have this secret configured
+          command: |
+            source ~/.nvm/nvm.sh && \
+            cd ~/app && \
+            ~/deploy.sh

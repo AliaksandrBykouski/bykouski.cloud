@@ -2,7 +2,7 @@
   "header": {
     "home": "AB",
     "services": "Služby",
-    "posts": "Blog",
+    "about": "O mně",
     "contacts": "Kontakty"
   },
   "title": "Aliaksandr Bykouski | Webový vývojář",
@@ -12,6 +12,62 @@
     "role": "Webový vývojář, který miluje kód a design. Vytvářím krásné, rychlé a uživatelsky přívětivé webové stránky pro vaše podnikání.",
     "description": "Oživím vaše nápady a přetvořím je na uživatelsky přívětivé rozhraní. Technologie proměňuji v umění a pohodlí ve standard. Každý můj projekt pomáhá značkám být slyšet a fungovat efektivněji.",
     "contact": "Kontaktujte mě 🔗"
+  },
+  "about": {
+    "title": "O mně",
+    "description": "Jsem zakladatel a vedoucí vlastní webové agentury - \"Bykouski Digital\", kde přetváříme nápady v moderní produkty — od jednoduchých vstupních stránek po složité webové platformy. Pro mě není důležité jen psát kód, ale také pomáhat značkám stát se viditelnějšími a blíže ke svým uživatelům. Mým posláním je vytvářet krásná, rychlá a uživatelsky přívětivá digitální řešení, která pomáhají podnikům růst a prosperovat. Neustále zdokonaluji své dovednosti a sleduji nejnovější trendy ve webovém vývoji, abych svým klientům poskytoval ta nejlepší řešení.",
+    "steck": "V svých projektech používám následující technologie: "
+  },
+  "technologies": {
+    "title": "Technologie",
+    "subtitle": "Moderní technologický stack pro vytváření vysoce kvalitních webových aplikací",
+    "list": {
+      "1": {
+        "title": "React & Next.js",
+        "description": "Moderní frameworky pro vytváření rychlých a škálovatelných webových aplikací s vynikajúcím uživatelským zážitkem.",
+        "icon": "react"
+      },
+      "2": {
+        "title": "TypeScript",
+        "description": "Typizovaný JavaScript pro zvyšování kvality kódu a snižování počtu chyb v projektech.",
+        "icon": "typescript"
+      },
+      "3": {
+        "title": "Tailwind CSS",
+        "description": "Utilitární CSS framework pro rychlý a efektivní vývoj responzivních rozhraní.",
+        "icon": "tailwind"
+      },
+      "4": {
+        "title": "Node.js",
+        "description": "Serverová JavaScript platforma pro vytváření škálovatelných backend aplikací a API.",
+        "icon": "nodejs"
+      },
+      "5": {
+        "title": "PostgreSQL",
+        "description": "Spolehlivá relační databáze pro ukládání a správu dat ve webových aplikacích.",
+        "icon": "postgresql"
+      },
+      "6": {
+        "title": "Prisma",
+        "description": "Moderní ORM pro práci s databázemi s typovou bezpečností a autogenerováním kódu.",
+        "icon": "prisma"
+      },
+      "7": {
+        "title": "Vercel",
+        "description": "Platforma pro nasazování a hosting webových aplikací s automatickým škálováním.",
+        "icon": "vercel"
+      },
+      "8": {
+        "title": "Git & GitHub",
+        "description": "Systémy správy verzí pro efektivní týmový vývoj a správu projektů.",
+        "icon": "git"
+      },
+      "9": {
+        "title": "Figma",
+        "description": "Nástroj pro návrh rozhraní a prototypování webových aplikací.",
+        "icon": "figma"
+      }
+    }
   },
   "services": {
     "title": "Moje služby",
@@ -59,9 +115,7 @@
     "social": "Sociální sítě",
     "follow": "Sledujte mě",
     "responseTime": "Doba odezvy",
-    "responseTimeText": "Obvykle odpovídám do 24 hodin",
-    "workProcess": "Pracovní proces",
-    "workProcessText": "Konzultace → Ocenění → Vývoj → Testování → Spuštění"
+    "responseTimeText": "Obvykle odpovídám do 12 hodin"
   },
   "NotFound": {
     "title": "Jejda! Stránka nenalezena.",
@@ -72,9 +126,39 @@
     "name": "Jožin z bažin",
     "email": "jozin@zbazin.cz",
     "message": "Ahoj, chtěl bych se zeptat na...",
-    "send": "Odeslat",
+    "send": "Odeslat zprávu",
     "success": "Děkuji! Vaše zpráva byla odeslána.",
     "error": "Jejda! Něco se pokazilo. Zkuste to prosím znovu.",
-    "agreeToTerms": "Souhlasím s podmínkami a zásadami ochrany osobních údajů."
+    "agreeToTerms": "Souhlasím s podmínkami a zásadami ochrany osobních údajů.",
+    "writeMe": "Napište mi"
+  },
+  "faq": {
+    "title": "Máte otázky? Zde jsou odpovědi na některé běžné dotazy.",
+    "list": {
+      "1": {
+        "question": "Jaké služby nabízíte?",
+        "answer": "Nabízím širokou škálu služeb v oblasti webového vývoje, včetně tvorby responzivních webových stránek, vývoje webových aplikací, správy obsahu, technické podpory, SEO optimalizace a mnoho dalšího. Mým cílem je pomoci vašemu podnikání růst a prosperovat v digitálním světě."
+      },
+      "2": {
+        "question": "Pracujete s klienty z jiných zemí?",
+        "answer": "Ano, pracuji s klienty z různých zemí a regionů. Mám zkušenosti se spoluprací s mezinárodními klienty a jsem připraven přizpůsobit se různým kulturním a obchodním kontextům."
+      },
+      "3": {
+        "question": "Jaký je váš pracovní proces?",
+        "answer": "Můj pracovní proces zahrnuje několik fází: konzultace, ocenění, vývoj, testování a spuštění. Spolupracuji úzce s klienty během celého procesu, aby bylo zajištěno, že konečný produkt splňuje jejich očekávání a potřeby."
+      },
+      "4": {
+        "question": "Jak dlouho trvá vývoj webové stránky?",
+        "answer": "Doba vývoje webové stránky závisí na složitosti projektu a rozsahu práce. Obvykle tvorba jednoduché vstupní stránky trvá 2 až 4 týdny, zatímco složitější projekty mohou trvat 6 až 12 týdnů nebo déle. Vždy se snažím poskytnout realistické termíny během fáze ocenění projektu."
+      },
+      "5": {
+        "question": "Jak probíhá cenová nabídka?",
+        "answer": "Cenová nabídka je založena na rozsahu a složitosti projektu. Po konzultaci a pochopení vašich potřeb připravím podrobnou nabídku, která zahrnuje všechny náklady spojené s vývojem webu. Snažím se být transparentní a férový v cenotvorbě, aby klienti přesně věděli, za co platí."
+      },
+      "6": {
+        "question": "Poskytujete podporu po spuštění webu?",
+        "answer": "Ano, nabízím služby technické podpory a údržby po spuštění webu. To zahrnuje aktualizace obsahu, opravy chyb, zlepšování výkonu a další úkoly spojené s udržováním vašeho webu v optimálním stavu."
+      }
+    }
   }
 }

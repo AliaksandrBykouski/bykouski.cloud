@@ -25,7 +25,9 @@ export default function Footer() {
           {/* Copyright */}
           <div className="mt-8 md:order-1 md:mt-0">
             <p className="text-center text-s leading-5 text-muted-foreground">
-              Webdeveloper Bykouski Aliaksandr &copy; {new Date().getFullYear()}
+              Made with ❤️ by Bykouski Aliaksandr &copy;{" "}
+              {new Date().getFullYear()}
+              <br />
             </p>
           </div>
         </div>

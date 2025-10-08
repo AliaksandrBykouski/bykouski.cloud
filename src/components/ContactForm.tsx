@@ -11,6 +11,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { sendEmail } from "@/lib/actions";
+import { Spinner } from "./ui/spinner";
 
 export default function ContactForm({
   translations,
@@ -20,6 +21,9 @@ export default function ContactForm({
     email: string;
     message: string;
     agreeToTerms: string;
+    send?: string;
+    success?: string;
+    error?: string;
   };
 }) {
   const {
@@ -38,25 +42,32 @@ export default function ContactForm({
     try {
       const result = await sendEmail(data);
       if (result.success) {
-        toast.success("Сообщение отправлено!");
+        toast.success(translations.success || "Message sent successfully");
         reset();
       } else {
         console.error("Send email error:", result.error);
-        toast.error(`Ошибка: ${result.error}`);
+        toast.error(translations.error || `Error: ${result.error}`);
       }
     } catch (error) {
       console.error("Unexpected error:", error);
-      toast.error("Произошла неожиданная ошибка");
+      toast.error(translations.error || "An unexpected error occurred");
     }
   };
 
   return (
     <section className="relative isolate">
       <div className="relative">
-        <form onSubmit={handleSubmit(onSubmit)} className="mt-16 lg:flex-auto" noValidate>
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="mt-5 lg:flex-auto"
+          noValidate
+        >
           <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-8">
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+              <label
+                htmlFor="name"
+                className="block text-sm font-medium text-foreground mb-2"
+              >
                 Name
               </label>
               <Input
@@ -80,7 +91,10 @@ export default function ContactForm({
               )}
             </div>
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+              <label
+                htmlFor="email"
+                className="block text-sm font-medium text-foreground mb-2"
+              >
                 Email
               </label>
               <Input
@@ -105,13 +119,16 @@ export default function ContactForm({
             </div>
           </div>
           <div className="mt-8">
-            <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+            <label
+              htmlFor="message"
+              className="block text-sm font-medium text-foreground mb-2"
+            >
               Message
             </label>
             <Textarea
               id="message"
               placeholder={translations.message}
-              rows={15}
+              rows={7}
               className="min-h-[120px]"
               {...register("message")}
               aria-invalid={errors.message ? "true" : "false"}
@@ -172,7 +189,7 @@ export default function ContactForm({
               style={{ background: "var(--ring)" }}
               className="hover:bg-[var(--destructive)] cursor-pointer w-full "
             >
-              {isSubmitting ? "Sending..." : "Send Message"}
+              {isSubmitting ? <Spinner /> : translations.send || "Send Message"}
             </Button>
           </div>
         </form>

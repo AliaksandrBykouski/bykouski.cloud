@@ -23,17 +23,19 @@ export default async function Header({ locale }: { locale: string }) {
         <div className="flex items-center gap-4 sm:gap-6">
           <nav className="flex gap-4 sm:gap-6">
             <Link
+              href="/about"
+              className="text-m font-medium text-muted-foreground transition-all duration-300 hover:text-foreground hover:scale-105 text-[var(--ring)] hover:text-[var(--foreground)]"
+            >
+              {t("header.about")}
+            </Link>
+
+            <Link
               href="/services"
               className="text-m font-medium text-muted-foreground transition-all duration-300 hover:text-foreground hover:scale-105 text-[var(--ring)] hover:text-[var(--foreground)]"
             >
               {t("header.services")}
             </Link>
-            <Link
-              href="/posts"
-              className="text-m font-medium text-muted-foreground transition-all duration-300 hover:text-foreground hover:scale-105 text-[var(--ring)] hover:text-[var(--foreground)]"
-            >
-              {t("header.posts")}
-            </Link>
+
             <Link
               href="/contacts"
               className="text-m font-medium text-muted-foreground transition-all duration-300 hover:text-foreground hover:scale-105 text-[var(--ring)] hover:text-[var(--foreground)]"

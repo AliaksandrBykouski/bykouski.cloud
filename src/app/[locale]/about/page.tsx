@@ -10,10 +10,12 @@ export default async function AboutPage({
   const t = await getTranslations({ locale });
 
   return (
-    <section className="min-h-screen bg-background text-foreground flex flex-col">
-      <div className="container mx-auto  p-10">
-        <h1 className="title mb-6  font-bold">{t("about.title")}</h1>
-        <p className="mb-4 text-xl">
+    <section className="min-h-screen bg-background text-foreground flex flex-col mx-auto p-5">
+      <div className="container animate-appear">
+        <h1 className="title text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-bold leading-tight text-[var(--foreground)] mb-4 lg:mb-5 xl:mb-6">
+          {t("about.title")}
+        </h1>
+        <p className="mt-4 md:mt-6 lg:mt-8 font-light text-lg md:text-xl lg:text-2xl text-muted-foreground">
           {(() => {
             const text = t("about.description");
             const searchText = "Bykouski Digital";
@@ -36,10 +38,10 @@ export default async function AboutPage({
 
         {/* Technologies Section */}
         <div className="mt-5 ">
-          <h2 className="title text-3xl font-semibold mb-2">
+          <h2 className="title mt-4 md:mt-6 lg:mt-8 text-2xl font-bold leading-tight sm:text-3xl md:text-4xl lg:text-5xl text-[var(--foreground)]">
             {t("technologies.title")}
           </h2>
-          <p className="text-muted-foreground text-xl mb-5 mt-5">
+          <p className="mt-4 md:mt-6 lg:mt-8 font-light text-lg md:text-xl lg:text-2xl text-muted-foreground">
             {t("technologies.subtitle")}
           </p>
 

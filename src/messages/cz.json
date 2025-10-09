@@ -128,7 +128,10 @@
     "success": "Děkuji! Vaše zpráva byla odeslána.",
     "error": "Jejda! Něco se pokazilo. Zkuste to prosím znovu.",
     "agreeToTerms": "Souhlasím s podmínkami a zásadami ochrany osobních údajů.",
-    "writeMe": "Napište mi"
+    "writeMe": "Napište mi",
+    "yourName": "Vaše jméno",
+    "yourEmail": "Váš email",
+    "yourMessage": "Vaše zpráva"
   },
   "faq": {
     "title": "Máte otázky? Zde jsou odpovědi na některé běžné dotazy.",

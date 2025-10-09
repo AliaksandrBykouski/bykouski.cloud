@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useLocale } from "next-intl";
 import { toast } from "sonner";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -24,8 +25,12 @@ export default function ContactForm({
     send?: string;
     success?: string;
     error?: string;
+    yourName?: string;
+    yourEmail?: string;
+    yourMessage?: string;
   };
 }) {
+  const locale = useLocale();
   const {
     register,
     handleSubmit,
@@ -40,7 +45,7 @@ export default function ContactForm({
 
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
     try {
-      const result = await sendEmail(data);
+      const result = await sendEmail(data, locale);
       if (result.success) {
         toast.success(translations.success || "Message sent successfully");
         reset();
@@ -68,7 +73,7 @@ export default function ContactForm({
                 htmlFor="name"
                 className="block text-sm font-medium text-foreground mb-2"
               >
-                Name
+                {translations.yourName || "Your Name"}
               </label>
               <Input
                 id="name"
@@ -95,7 +100,7 @@ export default function ContactForm({
                 htmlFor="email"
                 className="block text-sm font-medium text-foreground mb-2"
               >
-                Email
+                {translations.yourEmail || "Your Email"}
               </label>
               <Input
                 id="email"
@@ -123,7 +128,7 @@ export default function ContactForm({
               htmlFor="message"
               className="block text-sm font-medium text-foreground mb-2"
             >
-              Message
+              {translations.yourMessage || "Your Message"}
             </label>
             <Textarea
               id="message"

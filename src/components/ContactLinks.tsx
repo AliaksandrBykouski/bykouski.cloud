@@ -17,11 +17,11 @@ export default function ContactLinks({
   };
 
   return (
-    <div className="mt-9 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+    <div className="mt-9 grid  md:justify-items-start lg:justify-items-center gap-4 lg:gap-6 md:grid-cols-2 lg:grid-cols-3">
       <div className="space-y-4">
         <h3 className="text-lg font-semibold">{params.email}</h3>
         <div className="flex items-center gap-3">
-          <Mail className="h-5 w-5 text-muted-foreground" />
+          <Mail className="h-5 w-5 text-muted-foreground text-[var(--ring)]" />
           <a
             href={`mailto:${contactInfo.email}`}
             className="text-primary hover:underline"
@@ -34,7 +34,7 @@ export default function ContactLinks({
       <div className="space-y-4">
         <h3 className="text-lg font-semibold">WhatsApp</h3>
         <div className="flex items-center gap-3">
-          <MessageCircle className="h-5 w-5 text-muted-foreground" />
+          <MessageCircle className="h-5 w-5 text-muted-foreground text-[var(--ring)]" />
           <a
             href={`https://wa.me/${contactInfo.whatsapp}`}
             className="text-primary hover:underline"
@@ -47,7 +47,7 @@ export default function ContactLinks({
       <div className="space-y-4">
         <h3 className="text-lg font-semibold">{params.responseTime}</h3>
         <div className="flex items-center gap-3">
-          <Clock className="h-5 w-5 text-muted-foreground" />
+          <Clock className="h-5 w-5 text-muted-foreground text-[var(--ring)]" />
           <span className="text-muted-foreground">
             {params.responseTimeText}
           </span>

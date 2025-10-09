@@ -19,6 +19,9 @@ export default async function ContactsPage({
     send: t("form.send"),
     success: t("form.success"),
     error: t("form.error"),
+    yourName: t("form.yourName"),
+    yourEmail: t("form.yourEmail"),
+    yourMessage: t("form.yourMessage"),
   };
 
   const faqs = {
@@ -59,13 +62,16 @@ export default async function ContactsPage({
   };
 
   return (
-    <section className="pt-7" aria-labelledby="contacts-title">
-      <div className="container max-w-5xl">
+    <section className="pt-4" aria-labelledby="contacts-title">
+      <div className="container ">
         <div className="mb-5 space-y-3">
-          <h2 className="title" id="contacts-title">
+          <h1
+            className="title text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-[var(--foreground)]"
+            id="contacts-title"
+          >
             {t("contacts.title")}
-          </h2>
-          <p className="mt-8 text-xl font-light text-muted-foreground">
+          </h1>
+          <p className="mt-4 md:mt-6 lg:mt-8 font-light text-lg md:text-xl lg:text-2xl text-muted-foreground">
             {t("contacts.description")}
           </p>
         </div>

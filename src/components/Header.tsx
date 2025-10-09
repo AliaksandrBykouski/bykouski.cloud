@@ -3,10 +3,19 @@
 import Link from "next/link";
 import { ModeToggle } from "./ToggleTheme";
 import LanguageSwitcher from "./LanguageSwitcher";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Header({ locale }: { locale: string }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+    return () => document.body.classList.remove("overflow-hidden");
+  }, [isMobileMenuOpen]);
 
   return (
     <header className="sticky top-0 z-50 max-w-[1400px] border-b-2 border-border border-[var(--ring)] bg-background/80 backdrop-blur">
@@ -50,7 +59,7 @@ export default function Header({ locale }: { locale: string }) {
             className="rounded-md bg-primary px-2 py-1 text-background transition-colors duration-300 hover:bg-primary/80 "
             style={{ background: "var(--ring)" }}
           >
-            AB
+            BD
           </span>
         </Link>
 
@@ -115,7 +124,7 @@ export default function Header({ locale }: { locale: string }) {
       {/* Mobile menu overlay */}
       {isMobileMenuOpen && (
         <div
-          className="md:hidden fixed top-0 left-0 w-screen h-screen z-50 bg-[var(--background)] backdrop-blur-3xl container"
+          className="md:hidden fixed top-0 left-0 w-full h-screen z-50 bg-[var(--muted)] backdrop-blur-lg container overflow-hidden"
           onClick={() => setIsMobileMenuOpen(false)}
         >
           <div className="w-full h-full flex items-center justify-center">

@@ -15,13 +15,23 @@ const config: Config = {
       center: true,
       padding: "2rem",
       screens: {
-        "2xl": "1400px",
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
+        "2xl": "1536px",
       },
     },
     extend: {
       fontFamily: {
-        sans: ["var(--font-geist-sans)", ...require("tailwindcss/defaultTheme").fontFamily.sans],
-        serif: ["var(--font-geist-serif)", ...require("tailwindcss/defaultTheme").fontFamily.serif],
+        sans: [
+          "var(--font-geist-sans)",
+          ...require("tailwindcss/defaultTheme").fontFamily.sans,
+        ],
+        serif: [
+          "var(--font-geist-serif)",
+          ...require("tailwindcss/defaultTheme").fontFamily.serif,
+        ],
       },
       colors: {
         background: "hsl(var(--background))",

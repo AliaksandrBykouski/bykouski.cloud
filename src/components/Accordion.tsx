@@ -28,7 +28,7 @@ export async function AccordionDemo({
   );
 
   return (
-    <section className="container max-w-5xl pt-10" aria-labelledby="faq-title">
+    <section className="container pt-10" aria-labelledby="faq-title">
       <h2 id="faq-title" className="text-2xl font-bold text-center">
         {accordionTitle}
       </h2>

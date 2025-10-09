@@ -111,9 +111,6 @@
   "contacts": {
     "title": "Kontaktujte mě",
     "description": "Máte projekt nebo se jen chcete pozdravit? Mé dveře jsou vždy otevřené pro nové příležitosti a zajímavé rozhovory. Neváhejte mě kontaktovat prostřednictvím formuláře.",
-    "email": "Email",
-    "social": "Sociální sítě",
-    "follow": "Sledujte mě",
     "responseTime": "Doba odezvy",
     "responseTimeText": "Obvykle odpovídám do 12 hodin"
   },

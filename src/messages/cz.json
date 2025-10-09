@@ -3,7 +3,8 @@
     "home": "AB",
     "services": "Služby",
     "about": "O mně",
-    "contacts": "Kontakty"
+    "contacts": "Kontakty",
+    "main": "Hlavní"
   },
   "title": "Aliaksandr Bykouski | Webový vývojář",
   "description": "Ahoj! Jmenuji se Aliaksandr a jsem webový vývojář. Vytvářím krásné, rychlé a uživatelsky přívětivé webové stránky a aplikace.",
@@ -146,7 +147,7 @@
       },
       "4": {
         "question": "Jak dlouho trvá vývoj webové stránky?",
-        "answer": "Doba vývoje webové stránky závisí na složitosti projektu a rozsahu práce. Obvykle tvorba jednoduché vstupní stránky trvá 2 až 4 týdny, zatímco složitější projekty mohou trvat 6 až 12 týdnů nebo déle. Vždy se snažím poskytnout realistické termíny během fáze ocenění projektu."
+        "answer": "Doba vývoje webové stránky závisí na složitosti projektu a rozsahu práce. Obvykle tvorba jednoduché vstupní stránky trvá 1 až 2 týdny, zatímco složitější projekty mohou trvat 2 až 6 týdnů nebo déle. Vždy se snažím poskytnout realistické termíny během fáze ocenění projektu."
       },
       "5": {
         "question": "Jak probíhá cenová nabídka?",

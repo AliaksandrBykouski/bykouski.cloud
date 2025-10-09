@@ -29,8 +29,8 @@ export default function LanguageSwitcher() {
       <DropdownMenuTrigger asChild>
         <Button
           variant="outline"
-          size="sm"
-          className="text-[var(--ring)] hover:text-[var(--foreground)] cursor-pointer"
+          size="icon"
+          className="rounded-full text-[var(--ring)] hover:text-[var(--foreground)] cursor-pointer"
         >
           {currentLocale.toUpperCase()}
         </Button>

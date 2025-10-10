@@ -14,10 +14,15 @@ export default async function LocalLayout({
   params: Promise<{ locale: string }>;
 }>) {
   const { locale } = await params;
-  const messages = await getMessages();
+  const messages = await getMessages({ locale });
 
   return (
-    <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
+    <ThemeProvider
+      attribute="class"
+      defaultTheme="dark"
+      enableSystem
+      disableTransitionOnChange
+    >
       <NextIntlClientProvider locale={locale} messages={messages}>
         <div className="flex min-h-screen flex-col">
           <div className="container mx-auto w-full px-4 sm:px-6 lg:px-8 flex-1 flex flex-col">

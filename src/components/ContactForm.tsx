@@ -62,17 +62,10 @@ export default function ContactForm({
   return (
     <section className="relative isolate">
       <div className="relative">
-        <form
-          onSubmit={handleSubmit(onSubmit)}
-          className="mt-5 lg:flex-auto"
-          noValidate
-        >
+        <form onSubmit={handleSubmit(onSubmit)} className="mt-5 lg:flex-auto" noValidate>
           <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-8">
             <div>
-              <label
-                htmlFor="name"
-                className="block text-sm font-medium text-foreground mb-2"
-              >
+              <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
                 {translations.yourName || "Your Name"}
               </label>
               <Input
@@ -96,10 +89,7 @@ export default function ContactForm({
               )}
             </div>
             <div>
-              <label
-                htmlFor="email"
-                className="block text-sm font-medium text-foreground mb-2"
-              >
+              <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
                 {translations.yourEmail || "Your Email"}
               </label>
               <Input
@@ -124,10 +114,7 @@ export default function ContactForm({
             </div>
           </div>
           <div className="mt-8">
-            <label
-              htmlFor="message"
-              className="block text-sm font-medium text-foreground mb-2"
-            >
+            <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
               {translations.yourMessage || "Your Message"}
             </label>
             <Textarea

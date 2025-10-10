@@ -22,10 +22,7 @@ export default function ContactLinks({
         <h3 className="text-lg font-semibold">{params.email}</h3>
         <div className="flex items-center gap-3">
           <Mail className="h-5 w-5 text-muted-foreground text-[var(--ring)]" />
-          <a
-            href={`mailto:${contactInfo.email}`}
-            className="text-primary hover:underline"
-          >
+          <a href={`mailto:${contactInfo.email}`} className="text-primary hover:underline">
             {contactInfo.email}
           </a>
         </div>
@@ -48,9 +45,7 @@ export default function ContactLinks({
         <h3 className="text-lg font-semibold">{params.responseTime}</h3>
         <div className="flex items-center gap-3">
           <Clock className="h-5 w-5 text-muted-foreground text-[var(--ring)]" />
-          <span className="text-muted-foreground">
-            {params.responseTimeText}
-          </span>
+          <span className="text-muted-foreground">{params.responseTimeText}</span>
         </div>
       </div>
     </div>

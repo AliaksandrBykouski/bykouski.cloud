@@ -21,7 +21,8 @@ export default function LanguageSwitcher() {
   }, [locale]);
 
   const getHref = (newLocale: string) => {
-    return pathname.replace(new RegExp(`^/${locale}`), "/");
+    if (!pathname) return "/";
+    return pathname.replace(`/${locale}`, `/${newLocale}`);
   };
 
   return (

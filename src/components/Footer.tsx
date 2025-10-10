@@ -1,4 +1,5 @@
 import { navigation } from "@/lib/navlinks";
+import { useLocale } from "next-intl";
 
 export default function Footer() {
   return (
@@ -22,12 +23,11 @@ export default function Footer() {
             ))}
           </div>
 
-          {/* Copyright */}
+          {/* Copyright and Privacy Policy */}
           <div className="mt-8 md:order-1 md:mt-0">
             <p className="text-center text-s leading-5 text-muted-foreground">
               Made with ❤️ by Bykouski Aliaksandr &copy;{" "}
               {new Date().getFullYear()}
-              <br />
             </p>
           </div>
         </div>

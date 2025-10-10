@@ -161,5 +161,88 @@
         "answer": "Ano, nabízím služby technické podpory a údržby po spuštění webu. To zahrnuje aktualizace obsahu, opravy chyb, zlepšování výkonu a další úkoly spojené s udržováním vašeho webu v optimálním stavu."
       }
     }
+  },
+  "privacy": {
+    "title": "Zásady ochrany osobních údajů",
+    "description": "Zásady ochrany osobních údajů pro webové stránky Aliaksandra Bykouskiho",
+    "sections": {
+      "lastUpdated": {
+        "title": "Poslední aktualizace",
+        "content": "10. října 2025"
+      },
+      "introduction": {
+        "title": "Úvod",
+        "content": "Tyto zásady ochrany osobních údajů popisují, jak Aliaksandr Bykouski (dále jen 'já', 'mé' nebo 'mi') shromažďuje, používá a chrání vaše osobní údaje při návštěvě mých webových stránek nebo používání mých služeb."
+      },
+      "informationWeCollect": {
+        "title": "Shromažďované informace",
+        "personalInfo": {
+          "title": "Osobní informace",
+          "content": "Shromažďuji osobní informace, které mi dobrovolně poskytnete prostřednictvím kontaktních formulářů, e-mailové komunikace nebo jiných interakcí. Tyto informace mohou zahrnovat vaše jméno, e-mailovou adresu, telefonní číslo a jakékoli další informace, které se rozhodnete sdílet."
+        },
+        "technicalInfo": {
+          "title": "Technické informace",
+          "content": "Automaticky shromažďuji určité technické informace o vašem zařízení a používání webových stránek, včetně IP adresy, typu prohlížeče, operačního systému, odkazujících stránek a času strávěného na stránkách."
+        },
+        "contactForms": {
+          "title": "Kontaktní formuláře",
+          "content": "Když použijete kontaktní formulář na mých webových stránkách, shromažďuji informace, které poskytnete, včetně vašeho jména, e-mailové adresy a obsahu zprávy."
+        }
+      },
+      "howWeUseInfo": {
+        "title": "Jak používáme vaše informace",
+        "points": {
+          "1": "Odpověď na vaše dotazy a poskytování požadovaných služeb",
+          "2": "Komunikace s vámi ohledně projektů a služeb",
+          "3": "Zlepšování webových stránek a služeb na základě vašeho používání",
+          "4": "Odesílání relevantních informací o mých službách (s vaším souhlasem)",
+          "5": "Dodržování právních povinností",
+          "6": "Ochrana mých práv a zájmů"
+        }
+      },
+      "informationSharing": {
+        "title": "Sdílení informací",
+        "content": "Nesdílím, neprodávám ani jinak nepředávám vaše osobní informace třetím stranám, s výjimkou případů, kdy je to nutné pro poskytování služeb (například hostingové služby) nebo kdy to vyžaduje zákon."
+      },
+      "dataSecurity": {
+        "title": "Zabezpečení údajů",
+        "content": "Přijímám přiměřená bezpečnostní opatření k ochraně vašich osobních údajů před neoprávněným přístupem, změnou, zveřejněním nebo zničením. Mezi tato opatření patří šifrování, bezpečná úložiště a pravidelné bezpečnostní kontroly."
+      },
+      "dataRetention": {
+        "title": "Uchovávání údajů",
+        "content": "Osobní údaje uchovávám pouze po dobu nezbytně nutnou pro účely uvedené v těchto zásadách, pokud zákon nevyžaduje nebo nepovoluje delší uchovávání."
+      },
+      "yourRights": {
+        "title": "Vaše práva",
+        "points": {
+          "1": "Právo na přístup k vašim osobním údajům",
+          "2": "Právo na opravu nepřesných údajů",
+          "3": "Právo na vymazání vašich údajů",
+          "4": "Právo na omezení zpracování",
+          "5": "Právo na přenositelnost údajů",
+          "6": "Právo vznést námitku proti zpracování"
+        }
+      },
+      "cookies": {
+        "title": "Soubory cookie",
+        "content": "Moje webové stránky používají soubory cookie pro zlepšení uživatelského zážitku a analýzu návštěvnosti.",
+        "essential": {
+          "title": "Nezbytné cookies",
+          "content": "Tyto cookies jsou nutné pro základní fungování webových stránek a nelze je vypnout."
+        },
+        "analytics": {
+          "title": "Analytické cookies",
+          "content": "Používám analytické cookies ke sledování výkonu webových stránek a pochopení, jak návštěvníci používají mé stránky."
+        }
+      },
+      "thirdParty": {
+        "title": "Třetí strany",
+        "content": "Moje webové stránky mohou obsahovat odkazy na webové stránky třetích stran. Tyto stránky mají své vlastní zásady ochrany osobních údajů a nenesu odpovědnost za jejich praktiky."
+      },
+      "contact": {
+        "title": "Kontaktujte mě",
+        "content": "Máte-li jakékoli otázky ohledně těchto zásad ochrany osobních údajů nebo chcete uplatnit svá práva, kontaktujte mě prostřednictvím kontaktního formuláře nebo e-mailu."
+      }
+    }
   }
 }

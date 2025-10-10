@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { ModeToggle } from "./ToggleTheme";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { useEffect, useState } from "react";
@@ -175,6 +175,18 @@ export default function Header({ locale }: { locale: string }) {
                     : locale === "cz"
                       ? "Kontakty"
                       : "Contacts"}
+                </Link>
+
+                <Link
+                  href="/terms"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="text-2xl font-medium text-muted-foreground transition-all duration-300 hover:text-foreground hover:scale-105 text-[var(--ring)] hover:text-[var(--foreground)]"
+                >
+                  {locale === "ru"
+                    ? "Политика"
+                    : locale === "cz"
+                      ? "Zásady"
+                      : "Privacy"}
                 </Link>
               </nav>
             </div>

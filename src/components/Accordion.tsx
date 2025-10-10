@@ -19,25 +19,18 @@ export async function AccordionDemo({
   };
 }) {
   const accordionTitle = translations.title;
-  const faqs = Object.entries(translations.list).map(
-    ([key, { question, answer }]) => ({
-      id: key,
-      question,
-      answer,
-    })
-  );
+  const faqs = Object.entries(translations.list).map(([key, { question, answer }]) => ({
+    id: key,
+    question,
+    answer,
+  }));
 
   return (
     <section className="container pt-10" aria-labelledby="faq-title">
       <h2 id="faq-title" className="text-2xl font-bold text-center">
         {accordionTitle}
       </h2>
-      <Accordion
-        type="single"
-        collapsible
-        className=" mt-4"
-        defaultValue="item-1"
-      >
+      <Accordion type="single" collapsible className=" mt-4" defaultValue="item-1">
         <AccordionItem value="item-1">
           <AccordionTrigger className="text-xl font-semibold text-[var(--ring)]">
             {faqs[0].question}

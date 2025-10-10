@@ -3,11 +3,7 @@ import { getTranslations } from "next-intl/server";
 import { AccordionDemo } from "@/components/Accordion";
 import ContactLinks from "@/components/ContactLinks";
 
-export default async function ContactsPage({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}) {
+export default async function ContactsPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale });
 

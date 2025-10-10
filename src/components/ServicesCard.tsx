@@ -36,10 +36,7 @@ export default function ServicesCard({
         <p>{content}</p>
       </CardContent>
       <CardFooter>
-        <Link
-          className="text-m font-medium hover:underline text-[var(--ring)]"
-          href="/contacts"
-        >
+        <Link className="text-m font-medium hover:underline text-[var(--ring)]" href="/contacts">
           {footer}
         </Link>
       </CardFooter>

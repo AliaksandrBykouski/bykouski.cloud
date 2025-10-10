@@ -1,5 +1,5 @@
 import { navigation } from "@/lib/navlinks";
-import { useLocale } from "next-intl";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -9,9 +9,9 @@ export default function Footer() {
           {/* Social links */}
           <div className="flex justify-center space-x-6 md:order-2">
             {navigation.map((item, index) => (
-              <a
+              <Link
                 key={index}
-                href={`http://${item.name}.com/${item.username}`}
+                href={item.href}
                 target="_blank"
                 rel="noopener noreferrer"
                 title={item.name}
@@ -19,7 +19,7 @@ export default function Footer() {
               >
                 <span className="sr-only">{item.name}</span>
                 <item.icon aria-hidden="true" className="h-5 w-5" />
-              </a>
+              </Link>
             ))}
           </div>
 

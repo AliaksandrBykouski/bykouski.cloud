@@ -4,6 +4,7 @@ export const navigation = [
   {
     name: "Google",
     username: "google.com",
+    href: "mailto:postmaster@bykouskidigital.cz",
     icon: (props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) => (
       <svg
         viewBox="0 0 24 24"
@@ -32,6 +33,7 @@ export const navigation = [
   {
     name: "Instagram",
     username: "instagram.com",
+    href: "https://www.instagram.com",
     icon: (props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) => (
       <svg
         fill="var(--icon-color)"
@@ -60,6 +62,7 @@ export const navigation = [
   {
     name: "GitHub",
     username: "github.com",
+    href: "https://github.com/AliaksandrBykouski",
     icon: (props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) => (
       <svg fill="var(--foreground)" viewBox="0 0 22 22" {...props}>
         <path

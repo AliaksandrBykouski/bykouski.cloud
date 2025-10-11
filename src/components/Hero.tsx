@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
+import authorImage from "@/assets/author.png";
 import { Button } from "@/components/ui/button";
-import authorImage from "../../public/img/author.png";
 
 export default async function Hero({ locale }: { locale: string }) {
   const t = await getTranslations({ locale });
@@ -28,7 +28,7 @@ export default async function Hero({ locale }: { locale: string }) {
           src={authorImage}
           alt="Aliaksandr Bykouski"
           className="flex-1 rounded-lg grayscale"
-          priority
+          priority={true}
           width={200}
           height={200}
           style={{

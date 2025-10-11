@@ -1,5 +1,6 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import { useLocale } from "next-intl";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -9,19 +10,21 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Link, usePathname } from "@/i18n/routing";
+import { Link } from "@/i18n/routing";
 
 export default function LanguageSwitcher() {
-  const pathname = usePathname();
   const locale = useLocale();
+  const pathname = usePathname();
   const [currentLocale, setCurrentLocale] = useState(locale);
 
   useEffect(() => {
     setCurrentLocale(locale);
   }, [locale]);
 
-  const getHref = (newLocale: string) => {
-    return "/";
+  const getHref = (_newLocale: string) => {
+    // Заменяем текущий locale в пути на новый
+    const pathWithoutLocale = pathname.replace(`/${locale}`, "");
+    return pathWithoutLocale || "/";
   };
 
   return (

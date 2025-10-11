@@ -1,8 +1,8 @@
-import authorImage from "../../public/img/author.png";
-import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import Link from "next/link";
+import { getTranslations } from "next-intl/server";
 import { Button } from "@/components/ui/button";
+import authorImage from "../../public/img/author.png";
 
 export default async function Hero({ locale }: { locale: string }) {
   const t = await getTranslations({ locale });

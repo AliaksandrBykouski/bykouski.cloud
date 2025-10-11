@@ -1,9 +1,9 @@
 "use client";
 
-import { Link } from "@/i18n/routing";
-import { ModeToggle } from "./ToggleTheme";
-import LanguageSwitcher from "./LanguageSwitcher";
 import { useEffect, useState } from "react";
+import { Link } from "@/i18n/routing";
+import LanguageSwitcher from "./LanguageSwitcher";
+import { ModeToggle } from "./ToggleTheme";
 
 export default function Header({ locale }: { locale: string }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -22,16 +22,13 @@ export default function Header({ locale }: { locale: string }) {
       <div className="container mx-auto flex max-w-[1400px] items-center justify-between px-4 py-4">
         {/* Mobile menu button - показывается только на мобильных устройствах */}
         <button
+          type="button"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           className="md:hidden p-2 rounded-md hover:bg-accent transition-colors text-[var(--ring)] hover:text-[var(--foreground)] cursor-pointer relative z-[60]"
           aria-label="Toggle mobile menu"
         >
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <title>Menu</title>
             {isMobileMenuOpen ? (
               <path
                 strokeLinecap="round"
@@ -70,43 +67,27 @@ export default function Header({ locale }: { locale: string }) {
               href="/"
               className="text-m font-medium text-muted-foreground transition-all duration-300 hover:text-foreground hover:scale-105 text-[var(--ring)] hover:text-[var(--foreground)]"
             >
-              {locale === "ru"
-                ? "Главная"
-                : locale === "cz"
-                  ? "Hlavní"
-                  : "Main"}
+              {locale === "ru" ? "Главная" : locale === "cz" ? "Hlavní" : "Main"}
             </Link>
             <Link
               href="/about"
               className="text-m font-medium text-muted-foreground transition-all duration-300 hover:text-foreground hover:scale-105 text-[var(--ring)] hover:text-[var(--foreground)]"
             >
-              {locale === "ru"
-                ? "Обо мне"
-                : locale === "cz"
-                  ? "O mně"
-                  : "About"}
+              {locale === "ru" ? "Обо мне" : locale === "cz" ? "O mně" : "About"}
             </Link>
 
             <Link
               href="/services"
               className="text-m font-medium text-muted-foreground transition-all duration-300 hover:text-foreground hover:scale-105 text-[var(--ring)] hover:text-[var(--foreground)]"
             >
-              {locale === "ru"
-                ? "Услуги"
-                : locale === "cz"
-                  ? "Služby"
-                  : "Services"}
+              {locale === "ru" ? "Услуги" : locale === "cz" ? "Služby" : "Services"}
             </Link>
 
             <Link
               href="/contacts"
               className="text-m font-medium text-muted-foreground transition-all duration-300 hover:text-foreground hover:scale-105 text-[var(--ring)] hover:text-[var(--foreground)]"
             >
-              {locale === "ru"
-                ? "Контакты"
-                : locale === "cz"
-                  ? "Kontakty"
-                  : "Contacts"}
+              {locale === "ru" ? "Контакты" : locale === "cz" ? "Kontakty" : "Contacts"}
             </Link>
           </nav>
 
@@ -126,31 +107,34 @@ export default function Header({ locale }: { locale: string }) {
         <div
           className="md:hidden fixed top-0 left-0 w-full h-screen z-50 bg-[var(--muted)] backdrop-blur-lg container overflow-hidden"
           onClick={() => setIsMobileMenuOpen(false)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") setIsMobileMenuOpen(false);
+          }}
+          role="button"
+          aria-label="Close mobile menu"
         >
           <div className="w-full h-full flex items-center justify-center">
-            <div className="text-center" onClick={(e) => e.stopPropagation()}>
+            <div
+              className="text-center"
+              onClick={(e) => e.stopPropagation()}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") setIsMobileMenuOpen(false);
+              }}
+            >
               <nav className="flex flex-col space-y-8">
                 <Link
                   href="/"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="text-2xl font-medium text-muted-foreground transition-all duration-300 hover:text-foreground hover:scale-105 text-[var(--ring)] hover:text-[var(--foreground)]"
                 >
-                  {locale === "ru"
-                    ? "Главная"
-                    : locale === "cz"
-                      ? "Hlavní"
-                      : "Main"}
+                  {locale === "ru" ? "Главная" : locale === "cz" ? "Hlavní" : "Main"}
                 </Link>
                 <Link
                   href="/about"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="text-2xl font-medium text-muted-foreground transition-all duration-300 hover:text-foreground hover:scale-105 text-[var(--ring)] hover:text-[var(--foreground)]"
                 >
-                  {locale === "ru"
-                    ? "Обо мне"
-                    : locale === "cz"
-                      ? "O mně"
-                      : "About"}
+                  {locale === "ru" ? "Обо мне" : locale === "cz" ? "O mně" : "About"}
                 </Link>
 
                 <Link
@@ -158,11 +142,7 @@ export default function Header({ locale }: { locale: string }) {
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="text-2xl font-medium text-muted-foreground transition-all duration-300 hover:text-foreground hover:scale-105 text-[var(--ring)] hover:text-[var(--foreground)]"
                 >
-                  {locale === "ru"
-                    ? "Услуги"
-                    : locale === "cz"
-                      ? "Služby"
-                      : "Services"}
+                  {locale === "ru" ? "Услуги" : locale === "cz" ? "Služby" : "Services"}
                 </Link>
 
                 <Link
@@ -170,11 +150,7 @@ export default function Header({ locale }: { locale: string }) {
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="text-2xl font-medium text-muted-foreground transition-all duration-300 hover:text-foreground hover:scale-105 text-[var(--ring)] hover:text-[var(--foreground)]"
                 >
-                  {locale === "ru"
-                    ? "Контакты"
-                    : locale === "cz"
-                      ? "Kontakty"
-                      : "Contacts"}
+                  {locale === "ru" ? "Контакты" : locale === "cz" ? "Kontakty" : "Contacts"}
                 </Link>
 
                 <Link
@@ -182,11 +158,7 @@ export default function Header({ locale }: { locale: string }) {
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="text-2xl font-medium text-muted-foreground transition-all duration-300 hover:text-foreground hover:scale-105 text-[var(--ring)] hover:text-[var(--foreground)]"
                 >
-                  {locale === "ru"
-                    ? "Политика"
-                    : locale === "cz"
-                      ? "Zásady"
-                      : "Privacy"}
+                  {locale === "ru" ? "Политика" : locale === "cz" ? "Zásady" : "Privacy"}
                 </Link>
               </nav>
             </div>

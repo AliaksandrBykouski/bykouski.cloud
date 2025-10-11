@@ -1,7 +1,7 @@
 "use client";
 
-import { Link, usePathname } from "@/i18n/routing";
 import { useLocale } from "next-intl";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -9,7 +9,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { useState, useEffect } from "react";
+import { Link, usePathname } from "@/i18n/routing";
 
 export default function LanguageSwitcher() {
   const pathname = usePathname();

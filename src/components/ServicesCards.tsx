@@ -1,6 +1,6 @@
-import ServicesCard from "./ServicesCard";
+import { Code, FileText, Layout, Monitor, Search, Smartphone, Wrench, Zap } from "lucide-react";
 import { getTranslations } from "next-intl/server";
-import { Code, Smartphone, Layout, FileText, Wrench, Search, Monitor, Zap } from "lucide-react";
+import ServicesCard from "./ServicesCard";
 
 export default async function ServicesCards({ locale }: { locale: string }) {
   const t = await getTranslations({ locale });

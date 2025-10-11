@@ -1,9 +1,9 @@
 "use server";
 
-import z from "zod";
-import { ContactFormSchema } from "./schemas";
 import { Resend } from "resend";
+import z from "zod";
 import ContactFormEmail, { ConfirmationEmail } from "@/emails/contact-form-email";
+import { ContactFormSchema } from "./schemas";
 
 type ContactFormInputs = z.infer<typeof ContactFormSchema>;
 

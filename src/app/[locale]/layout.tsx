@@ -1,10 +1,10 @@
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
-import "./globals.css";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import "./globals.css";
+import { getMessages } from "next-intl/server";
 
 export default async function LocalLayout({
   children,
@@ -17,12 +17,7 @@ export default async function LocalLayout({
   const messages = await getMessages({ locale });
 
   return (
-    <ThemeProvider
-      attribute="class"
-      defaultTheme="dark"
-      enableSystem
-      disableTransitionOnChange
-    >
+    <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
       <NextIntlClientProvider locale={locale} messages={messages}>
         <div className="flex min-h-screen flex-col">
           <div className="container mx-auto w-full px-4 sm:px-6 lg:px-8 flex-1 flex flex-col">

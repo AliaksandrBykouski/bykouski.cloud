@@ -1,17 +1,16 @@
 "use client";
 
+import { zodResolver } from "@hookform/resolvers/zod";
 import Link from "next/link";
 import { useLocale } from "next-intl";
+import { Controller, type SubmitHandler, useForm } from "react-hook-form";
 import { toast } from "sonner";
-import { SubmitHandler, useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { Controller } from "react-hook-form";
-import { ContactFormSchema, Inputs } from "@/lib/schemas";
 import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Checkbox } from "@/components/ui/checkbox";
 import { sendEmail } from "@/lib/actions";
+import { ContactFormSchema, type Inputs } from "@/lib/schemas";
 import { Spinner } from "./ui/spinner";
 
 export default function ContactForm({

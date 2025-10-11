@@ -1,6 +1,6 @@
-import ContactForm from "@/components/ContactForm";
 import { getTranslations } from "next-intl/server";
 import { AccordionDemo } from "@/components/Accordion";
+import ContactForm from "@/components/ContactForm";
 import ContactLinks from "@/components/ContactLinks";
 
 export default async function ContactsPage({ params }: { params: Promise<{ locale: string }> }) {
@@ -51,7 +51,7 @@ export default async function ContactsPage({ params }: { params: Promise<{ local
 
   const contactInfo = {
     email: "E-mail",
-    whatsapp: "WhatsApp",
+    telegram: "Telegram",
     responseTime: t("contacts.responseTime"),
     responseTimeText: t("contacts.responseTimeText"),
     writeMe: t("form.writeMe"),

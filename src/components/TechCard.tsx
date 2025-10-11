@@ -1,8 +1,8 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { SiTypescript, SiTailwindcss, SiPrisma, SiNextdotjs } from "react-icons/si";
-import { TbBrandVercel } from "react-icons/tb";
-import { FaReact, FaNodeJs, FaGitAlt, FaFigma } from "react-icons/fa";
 import { BiLogoPostgresql } from "react-icons/bi";
+import { FaFigma, FaGitAlt, FaNodeJs, FaReact } from "react-icons/fa";
+import { SiNextdotjs, SiPrisma, SiTailwindcss, SiTypescript } from "react-icons/si";
+import { TbBrandVercel } from "react-icons/tb";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 interface TechCardProps {
   title: string;

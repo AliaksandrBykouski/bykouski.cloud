@@ -44,46 +44,55 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
           <TechCards
             technologies={[
               {
+                id: "1",
                 title: t("technologies.list.1.title"),
                 description: t("technologies.list.1.description"),
                 iconName: t("technologies.list.1.icon"),
               },
               {
+                id: "2",
                 title: t("technologies.list.2.title"),
                 description: t("technologies.list.2.description"),
                 iconName: t("technologies.list.2.icon"),
               },
               {
+                id: "3",
                 title: t("technologies.list.3.title"),
                 description: t("technologies.list.3.description"),
                 iconName: t("technologies.list.3.icon"),
               },
               {
+                id: "4",
                 title: t("technologies.list.4.title"),
                 description: t("technologies.list.4.description"),
                 iconName: t("technologies.list.4.icon"),
               },
               {
+                id: "5",
                 title: t("technologies.list.5.title"),
                 description: t("technologies.list.5.description"),
                 iconName: t("technologies.list.5.icon"),
               },
               {
+                id: "6",
                 title: t("technologies.list.6.title"),
                 description: t("technologies.list.6.description"),
                 iconName: t("technologies.list.6.icon"),
               },
               {
+                id: "7",
                 title: t("technologies.list.7.title"),
                 description: t("technologies.list.7.description"),
                 iconName: t("technologies.list.7.icon"),
               },
               {
+                id: "8",
                 title: t("technologies.list.8.title"),
                 description: t("technologies.list.8.description"),
                 iconName: t("technologies.list.8.icon"),
               },
               {
+                id: "9",
                 title: t("technologies.list.9.title"),
                 description: t("technologies.list.9.description"),
                 iconName: t("technologies.list.9.icon"),

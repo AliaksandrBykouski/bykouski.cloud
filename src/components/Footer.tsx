@@ -1,5 +1,5 @@
-import { navigation } from "@/lib/navlinks";
 import Link from "next/link";
+import { navigation } from "@/lib/navlinks";
 
 export default function Footer() {
   return (
@@ -8,9 +8,9 @@ export default function Footer() {
         <div className="md:flex md:items-center md:justify-between">
           {/* Social links */}
           <div className="flex justify-center space-x-6 md:order-2">
-            {navigation.map((item, index) => (
+            {navigation.map((item) => (
               <Link
-                key={index}
+                key={item.name}
                 href={item.href}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -26,8 +26,7 @@ export default function Footer() {
           {/* Copyright and Privacy Policy */}
           <div className="mt-8 md:order-1 md:mt-0">
             <p className="text-center text-s leading-5 text-muted-foreground">
-              Made with ❤️ by Bykouski Aliaksandr &copy;{" "}
-              {new Date().getFullYear()}
+              Made with ❤️ by Bykouski Aliaksandr &copy; {new Date().getFullYear()}
             </p>
           </div>
         </div>

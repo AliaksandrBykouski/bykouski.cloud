@@ -1,3 +1,5 @@
+import type { LucideIcon } from "lucide-react";
+import Link from "next/link";
 import {
   Card,
   CardAction,
@@ -6,8 +8,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Star, LucideIcon } from "lucide-react";
-import Link from "next/link";
 
 export default function ServicesCard({
   title,

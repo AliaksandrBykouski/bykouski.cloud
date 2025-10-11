@@ -35,8 +35,4 @@ jobs:
           private_key: ${{ secrets.PROD_SSH_PRIVATE_KEY }}
           # host_fingerprint: ${{ secrets.PROD_SSH_FINGERPRINT }} # Optional - uncomment if you have this secret configured
           command: |
-            bash -c "
-            source ~/.nvm/nvm.sh && \
-            cd ~/bykouskidigital && \
-            ~/deploy.sh
-            "
+            bash -c 'source ~/.nvm/nvm.sh && cd ~/bykouskidigital && git pull && npm install && npm run build && npx pm2 reload all'

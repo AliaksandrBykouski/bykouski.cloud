@@ -1,47 +1,10 @@
+import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { ImageResponse } from "next/og";
 
-export async function generateImageMetadata() {
-  return [
-    {
-      contentType: "image/png",
-      size: { width: 1200, height: 630 },
-      id: "og-image",
-    },
-  ];
-}
-
-export async function generateImage({ id }: { id: string }) {
-  if (id === "og-image") {
-    return new ImageResponse(
-      (
-        <div
-          style={{
-            fontSize: 48,
-            background: "white",
-            width: "100%",
-            height: "100%",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          Web Studio Bykouski Aliaksandr
-        </div>
-      ),
-      {
-        width: 1200,
-        height: 630,
-      }
-    );
-  }
-}
-
-export async function generateMetadata() {
+export async function generateMetadata(): Promise<Metadata> {
   return {
     metadataBase: new URL("https://bykouskidigital.cz"),
-    title:
-      "Tvorba webových stránek. Web development Czech Republic | Bykouski Aliaksandr",
+    title: "Tvorba webových stránek. Web development Czech Republic | Bykouski Aliaksandr",
     description:
       "Profesionální služby vývoje webových stránek na míru vašim potřebám. Specializuji se na Next.js, React, CSS a JavaScript pro vytváření moderních a responzivních webů v České republice.",
     keywords:
@@ -49,21 +12,28 @@ export async function generateMetadata() {
     authors: [{ name: "Aliaksandr Bykouski" }],
     creator: "Aliaksandr Bykouski",
     publisher: "Aliaksandr Bykouski",
+    icons: {
+      icon: [
+        { url: "/favicon.ico" },
+        { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+        { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      ],
+      apple: "/apple-touch-icon.png",
+    },
+    manifest: "/site.webmanifest",
     formatDetection: {
       telephone: false,
     },
     openGraph: {
       title: "Web Studio Bykouski Aliaksandr",
-      description:
-        "Profesionální služby vývoje webových stránek na míru vašim potřebám.",
+      description: "Profesionální služby vývoje webových stránek na míru vašim potřebám.",
       url: "https://bykouskidigital.cz",
       siteName: "Web Studio Bykouski Aliaksandr",
       type: "website",
       locale: "cs_CS",
-      alternateLocale: ["ru_RU"],
       images: [
         {
-          url: "/og-image",
+          url: "/og-image.png",
           width: 1200,
           height: 630,
           alt: "Web Studio Bykouski Aliaksandr",
@@ -87,8 +57,7 @@ export async function generateMetadata() {
       },
     },
     verification: {
-      google:
-        "google-site-verification=egOW5c0XOSc-XscX9vc69XvuyPwpg-XzSTsTTHLMbTc",
+      google: "egOW5c0XOSc-XscX9vc69XvuyPwpg-XzSTsTTHLMbTc",
     },
     alternates: {
       canonical: "https://bykouskidigital.cz",
@@ -96,6 +65,9 @@ export async function generateMetadata() {
         cs: "https://bykouskidigital.cz",
         ru: "https://bykouskidigital.cz/ru",
       },
+    },
+    other: {
+      "seznam-wmt": "QYpIJCr6TxsfvFo0FO6rbKHjOh57x28u",
     },
   };
 }
@@ -125,36 +97,11 @@ export default async function RootLayout({
   return (
     <html lang="cs" suppressHydrationWarning>
       <head>
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/favicon-16x16.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/favicon-32x32.png"
-        />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <link rel="manifest" href="/site.webmanifest" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin=""
-        />
-        <link rel="manifest" href="/manifest.webmanifest" />
-        <meta
-          name="description"
-          content="Profesionální služby vývoje webových stránek na míru vašim potřebám. Specializuji se na Next.js, React, CSS a JavaScript pro vytváření moderních a responzivních webů v České republice."
-        />
-        <meta name="seznam-wmt" content="QYpIJCr6TxsfvFo0FO6rbKHjOh57x28u" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased flex min-h-screen flex-col  font-sans text-foreground`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased flex min-h-screen flex-col font-sans text-foreground`}
       >
         {children}
       </body>

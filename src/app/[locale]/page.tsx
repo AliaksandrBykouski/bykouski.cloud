@@ -1,10 +1,6 @@
 import Hero from "@/components/Hero";
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}) {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
 
   return {
@@ -16,11 +12,7 @@ export async function generateMetadata({
   };
 }
 
-export default async function Home({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}) {
+export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
 
   return (

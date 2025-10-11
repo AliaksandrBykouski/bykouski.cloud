@@ -2,9 +2,7 @@
 
 import { Resend } from "resend";
 import z from "zod";
-import ContactFormEmail, {
-  ConfirmationEmail,
-} from "@/emails/contact-form-email";
+import ContactFormEmail, { ConfirmationEmail } from "@/emails/contact-form-email";
 import { ContactFormSchema } from "./schemas";
 
 type ContactFormInputs = z.infer<typeof ContactFormSchema>;
@@ -33,26 +31,19 @@ export async function sendEmail(data: ContactFormInputs, locale?: string) {
     }
 
     // Send confirmation email to sender
-    const { data: confirmationData, error: confirmationError } =
-      await resend.emails.send({
-        from: "Aliaksandr <hello@bykouski.cloud>",
-        to: [email],
-        subject:
-          locale === "cs"
-            ? "Vaše zpráva byla doručena"
-            : "Ваше сообщение доставлено",
-        text:
-          locale === "cs"
-            ? `Dobrý den, ${name}!\n\nObdrželi jsme vaši zprávu a brzy vás budeme kontaktovat.\n\nS pozdravem,\nTým Aliaksandr Bykouski`
-            : `Здравствуйте, ${name}!\n\nМы получили ваше сообщение и свяжемся с вами в ближайшее время.\n\nС уважением,\nКоманда Aliaksandr Bykouski`,
-        react: await ConfirmationEmail({ name, locale }),
-      });
+    const { data: confirmationData, error: confirmationError } = await resend.emails.send({
+      from: "Aliaksandr <hello@bykouski.cloud>",
+      to: [email],
+      subject: locale === "cs" ? "Vaše zpráva byla doručena" : "Ваше сообщение доставлено",
+      text:
+        locale === "cs"
+          ? `Dobrý den, ${name}!\n\nObdrželi jsme vaši zprávu a brzy vás budeme kontaktovat.\n\nS pozdravem,\nTým Aliaksandr Bykouski`
+          : `Здравствуйте, ${name}!\n\nМы получили ваше сообщение и свяжемся с вами в ближайшее время.\n\nС уважением,\nКоманда Aliaksandr Bykouski`,
+      react: await ConfirmationEmail({ name, locale }),
+    });
 
     if (!confirmationData || confirmationError) {
-      console.warn(
-        "Failed to send confirmation email:",
-        confirmationError?.message
-      );
+      console.warn("Failed to send confirmation email:", confirmationError?.message);
       // Don't throw error here as the main email was sent successfully
     }
 

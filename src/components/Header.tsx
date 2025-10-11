@@ -104,23 +104,9 @@ export default function Header({ locale }: { locale: string }) {
 
       {/* Mobile menu overlay */}
       {isMobileMenuOpen && (
-        <div
-          className="md:hidden fixed top-0 left-0 w-full h-screen z-50 bg-[var(--muted)] backdrop-blur-lg container overflow-hidden"
-          onClick={() => setIsMobileMenuOpen(false)}
-          onKeyDown={(e) => {
-            if (e.key === "Enter" || e.key === " ") setIsMobileMenuOpen(false);
-          }}
-          role="button"
-          aria-label="Close mobile menu"
-        >
+        <div className="md:hidden fixed top-0 left-0 w-full h-screen z-50 bg-[var(--muted)] backdrop-blur-lg container overflow-hidden">
           <div className="w-full h-full flex items-center justify-center">
-            <div
-              className="text-center"
-              onClick={(e) => e.stopPropagation()}
-              onKeyDown={(e) => {
-                if (e.key === "Enter" || e.key === " ") setIsMobileMenuOpen(false);
-              }}
-            >
+            <div className="text-center">
               <nav className="flex flex-col space-y-8">
                 <Link
                   href="/"

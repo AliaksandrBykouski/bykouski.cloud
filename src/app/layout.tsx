@@ -65,7 +65,6 @@ export async function generateMetadata(): Promise<Metadata> {
       canonical: "https://bykouskidigital.cz",
       languages: {
         cs: "https://bykouskidigital.cz",
-        cs: "https://bykouskidigital.cz",
         ru: "https://bykouskidigital.cz/ru",
       },
     },

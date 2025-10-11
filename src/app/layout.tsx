@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://bykouskidigital.cz"),
-  title: "Tvorba webových stránek. Web development Czech Republic | Bykouski Aliaksandr",
+  title: "Web Studio Bykouski Aliaksandr | Tvorba webových stránek",
   description:
     "Profesionální služby vývoje webových stránek na míru vašim potřebám. Specializuji se na Next.js, React, CSS a JavaScript pro vytváření moderních a responzivních webů v České republice.",
   keywords:
@@ -25,7 +25,8 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Web Studio Bykouski Aliaksandr",
-    description: "Profesionální služby vývoje webových stránek na míru vašim potřebám.",
+    description:
+      "Profesionální služby vývoje webových stránek na míru vašim potřebám.",
     url: "https://bykouskidigital.cz",
     siteName: "Web Studio Bykouski Aliaksandr",
     type: "website",
@@ -96,7 +97,11 @@ export default function RootLayout({
     <html lang="cs" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin=""
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex min-h-screen flex-col font-sans text-foreground`}

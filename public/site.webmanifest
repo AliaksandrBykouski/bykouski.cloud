@@ -4,6 +4,8 @@
   "description": "Profesionální služby vývoje webových stránek na míru vašim potřebám.",
   "start_url": "/",
   "display": "standalone",
+  "theme_color": "#8B5CF6",
+  "background_color": "#F8FAFC",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",

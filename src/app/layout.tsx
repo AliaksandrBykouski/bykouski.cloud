@@ -56,7 +56,7 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="cz" suppressHydrationWarning>
+    <html lang="cs" suppressHydrationWarning>
       <Head>
         {/* Основные метатеги для чешского рынка */}
         <meta

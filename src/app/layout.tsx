@@ -14,23 +14,25 @@ export async function generateImageMetadata() {
 export async function generateImage({ id }: { id: string }) {
   if (id === "og-image") {
     return new ImageResponse(
-      <div
-        style={{
-          fontSize: 48,
-          background: "white",
-          width: "100%",
-          height: "100%",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        Web Studio Bykouski Aliaksandr
-      </div>,
+      (
+        <div
+          style={{
+            fontSize: 48,
+            background: "white",
+            width: "100%",
+            height: "100%",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          Web Studio Bykouski Aliaksandr
+        </div>
+      ),
       {
         width: 1200,
         height: 630,
-      },
+      }
     );
   }
 }
@@ -38,7 +40,8 @@ export async function generateImage({ id }: { id: string }) {
 export async function generateMetadata() {
   return {
     metadataBase: new URL("https://bykouskidigital.cz"),
-    title: "Tvorba webových stránek. Web development Czech Republic | Bykouski Aliaksandr",
+    title:
+      "Tvorba webových stránek. Web development Czech Republic | Bykouski Aliaksandr",
     description:
       "Profesionální služby vývoje webových stránek na míru vašim potřebám. Specializuji se na Next.js, React, CSS a JavaScript pro vytváření moderních a responzivních webů v České republice.",
     keywords:
@@ -51,7 +54,8 @@ export async function generateMetadata() {
     },
     openGraph: {
       title: "Web Studio Bykouski Aliaksandr",
-      description: "Profesionální služby vývoje webových stránek na míru vašim potřebám.",
+      description:
+        "Profesionální služby vývoje webových stránek na míru vašim potřebám.",
       url: "https://bykouskidigital.cz",
       siteName: "Web Studio Bykouski Aliaksandr",
       type: "website",
@@ -83,12 +87,13 @@ export async function generateMetadata() {
       },
     },
     verification: {
-      google: "google-site-verification=egOW5c0XOSc-XscX9vc69XvuyPwpg-XzSTsTTHLMbTc",
+      google:
+        "google-site-verification=egOW5c0XOSc-XscX9vc69XvuyPwpg-XzSTsTTHLMbTc",
     },
     alternates: {
       canonical: "https://bykouskidigital.cz",
       languages: {
-        cz: "https://bykouskidigital.cz",
+        cs: "https://bykouskidigital.cz",
         ru: "https://bykouskidigital.cz/ru",
       },
     },
@@ -121,8 +126,15 @@ export default async function RootLayout({
     <html lang="cs" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin=""
+        />
+        <meta
+          name="description"
+          content="Profesionální služby vývoje webových stránek na míru vašim potřebám. Specializuji se na Next.js, React, CSS a JavaScript pro vytváření moderních a responzivních webů v České republice."
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex min-h-screen flex-col  font-sans text-foreground`}

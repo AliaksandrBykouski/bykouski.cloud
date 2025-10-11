@@ -38,11 +38,11 @@ export async function sendEmail(data: ContactFormInputs, locale?: string) {
         from: "Aliaksandr <hello@bykouski.cloud>",
         to: [email],
         subject:
-          locale === "cz"
+          locale === "cs"
             ? "Vaše zpráva byla doručena"
             : "Ваше сообщение доставлено",
         text:
-          locale === "cz"
+          locale === "cs"
             ? `Dobrý den, ${name}!\n\nObdrželi jsme vaši zprávu a brzy vás budeme kontaktovat.\n\nS pozdravem,\nTým Aliaksandr Bykouski`
             : `Здравствуйте, ${name}!\n\nМы получили ваше сообщение и свяжемся с вами в ближайшее время.\n\nС уважением,\nКоманда Aliaksandr Bykouski`,
         react: await ConfirmationEmail({ name, locale }),

@@ -59,7 +59,7 @@ export async function generateMetadata() {
       url: "https://bykouskidigital.cz",
       siteName: "Web Studio Bykouski Aliaksandr",
       type: "website",
-      locale: "cz_CZ",
+      locale: "cs_CS",
       alternateLocale: ["ru_RU"],
       images: [
         {

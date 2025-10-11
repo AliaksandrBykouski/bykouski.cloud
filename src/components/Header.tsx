@@ -27,7 +27,12 @@ export default function Header({ locale }: { locale: string }) {
           className="md:hidden p-2 rounded-md hover:bg-accent transition-colors text-[var(--ring)] hover:text-[var(--foreground)] cursor-pointer relative z-[60]"
           aria-label="Toggle mobile menu"
         >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
             <title>Menu</title>
             {isMobileMenuOpen ? (
               <path
@@ -67,27 +72,43 @@ export default function Header({ locale }: { locale: string }) {
               href="/"
               className="text-m font-medium text-muted-foreground transition-all duration-300 hover:text-foreground hover:scale-105 text-[var(--ring)] hover:text-[var(--foreground)]"
             >
-              {locale === "ru" ? "Главная" : locale === "cz" ? "Hlavní" : "Main"}
+              {locale === "ru"
+                ? "Главная"
+                : locale === "cs"
+                  ? "Hlavní"
+                  : "Main"}
             </Link>
             <Link
               href="/about"
               className="text-m font-medium text-muted-foreground transition-all duration-300 hover:text-foreground hover:scale-105 text-[var(--ring)] hover:text-[var(--foreground)]"
             >
-              {locale === "ru" ? "Обо мне" : locale === "cz" ? "O mně" : "About"}
+              {locale === "ru"
+                ? "Обо мне"
+                : locale === "cs"
+                  ? "O mně"
+                  : "About"}
             </Link>
 
             <Link
               href="/services"
               className="text-m font-medium text-muted-foreground transition-all duration-300 hover:text-foreground hover:scale-105 text-[var(--ring)] hover:text-[var(--foreground)]"
             >
-              {locale === "ru" ? "Услуги" : locale === "cz" ? "Služby" : "Services"}
+              {locale === "ru"
+                ? "Услуги"
+                : locale === "cs"
+                  ? "Služby"
+                  : "Services"}
             </Link>
 
             <Link
               href="/contacts"
               className="text-m font-medium text-muted-foreground transition-all duration-300 hover:text-foreground hover:scale-105 text-[var(--ring)] hover:text-[var(--foreground)]"
             >
-              {locale === "ru" ? "Контакты" : locale === "cz" ? "Kontakty" : "Contacts"}
+              {locale === "ru"
+                ? "Контакты"
+                : locale === "cs"
+                  ? "Kontakty"
+                  : "Contacts"}
             </Link>
           </nav>
 
@@ -113,14 +134,22 @@ export default function Header({ locale }: { locale: string }) {
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="text-2xl font-medium text-muted-foreground transition-all duration-300 hover:text-foreground hover:scale-105 text-[var(--ring)] hover:text-[var(--foreground)]"
                 >
-                  {locale === "ru" ? "Главная" : locale === "cz" ? "Hlavní" : "Main"}
+                  {locale === "ru"
+                    ? "Главная"
+                    : locale === "cs"
+                      ? "Hlavní"
+                      : "Main"}
                 </Link>
                 <Link
                   href="/about"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="text-2xl font-medium text-muted-foreground transition-all duration-300 hover:text-foreground hover:scale-105 text-[var(--ring)] hover:text-[var(--foreground)]"
                 >
-                  {locale === "ru" ? "Обо мне" : locale === "cz" ? "O mně" : "About"}
+                  {locale === "ru"
+                    ? "Обо мне"
+                    : locale === "cs"
+                      ? "O mně"
+                      : "About"}
                 </Link>
 
                 <Link
@@ -128,7 +157,11 @@ export default function Header({ locale }: { locale: string }) {
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="text-2xl font-medium text-muted-foreground transition-all duration-300 hover:text-foreground hover:scale-105 text-[var(--ring)] hover:text-[var(--foreground)]"
                 >
-                  {locale === "ru" ? "Услуги" : locale === "cz" ? "Služby" : "Services"}
+                  {locale === "ru"
+                    ? "Услуги"
+                    : locale === "cs"
+                      ? "Služby"
+                      : "Services"}
                 </Link>
 
                 <Link
@@ -136,7 +169,11 @@ export default function Header({ locale }: { locale: string }) {
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="text-2xl font-medium text-muted-foreground transition-all duration-300 hover:text-foreground hover:scale-105 text-[var(--ring)] hover:text-[var(--foreground)]"
                 >
-                  {locale === "ru" ? "Контакты" : locale === "cz" ? "Kontakty" : "Contacts"}
+                  {locale === "ru"
+                    ? "Контакты"
+                    : locale === "cs"
+                      ? "Kontakty"
+                      : "Contacts"}
                 </Link>
               </nav>
             </div>

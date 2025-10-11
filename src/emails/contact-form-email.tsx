@@ -4,7 +4,11 @@ interface ContactFormEmailProps {
   message: string;
 }
 
-const ContactFormEmail: React.FC<Readonly<ContactFormEmailProps>> = ({ name, email, message }) => {
+const ContactFormEmail: React.FC<Readonly<ContactFormEmailProps>> = ({
+  name,
+  email,
+  message,
+}) => {
   return (
     <div>
       <h1>Вам пришло сообщение от {name}</h1>
@@ -24,13 +28,18 @@ interface ConfirmationEmailProps {
   locale?: string;
 }
 
-const ConfirmationEmail: React.FC<Readonly<ConfirmationEmailProps>> = ({ name, locale = "ru" }) => {
-  const isCzech = locale === "cz";
+const ConfirmationEmail: React.FC<Readonly<ConfirmationEmailProps>> = ({
+  name,
+  locale = "ru",
+}) => {
+  const isCzech = locale === "cs";
 
   return (
     <div>
       <h1>
-        {isCzech ? `Děkujeme za vaši zprávu, ${name}!` : `Спасибо за ваше сообщение, ${name}!`}
+        {isCzech
+          ? `Děkujeme za vaši zprávu, ${name}!`
+          : `Спасибо за ваше сообщение, ${name}!`}
       </h1>
       <p>
         {isCzech

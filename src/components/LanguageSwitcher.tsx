@@ -35,7 +35,7 @@ export default function LanguageSwitcher() {
           size="icon"
           className="rounded-full text-[var(--ring)] hover:text-[var(--foreground)] cursor-pointer"
         >
-          {currentLocale.toUpperCase()}
+          {currentLocale === "cs" ? "CZ" : "RU"}
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent style={{ backgroundColor: "var(--ring)" }}>
@@ -45,7 +45,7 @@ export default function LanguageSwitcher() {
           </Link>
         </DropdownMenuItem>
         <DropdownMenuItem asChild>
-          <Link href={getHref("cz")} locale="cz">
+          <Link href={getHref("cs")} locale="cs">
             CZ
           </Link>
         </DropdownMenuItem>

@@ -14,8 +14,8 @@ jobs:
         with:
           node-version: 22.x.x
           cache: pnpm
-      - run: pnpm install --frozen-lockfile
-      - run: pnpm run lint
+      - run: npm install
+      - run: npm lint
   deploy:
     needs: lint
     runs-on: ubuntu-latest

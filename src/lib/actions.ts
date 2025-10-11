@@ -19,7 +19,7 @@ export async function sendEmail(data: ContactFormInputs, locale?: string) {
 
     // Send email to admin
     const { data, error } = await resend.emails.send({
-      from: "Aliaksandr <hello@bykouski.cloud>",
+      from: "Aliaksandr <hello@bykouskidigital.cz>",
       to: ["post@bykouskidigital.cz"],
       replyTo: email,
       subject: `Вам пришло сообщение от ${name}`,
@@ -32,7 +32,7 @@ export async function sendEmail(data: ContactFormInputs, locale?: string) {
 
     // Send confirmation email to sender
     const { data: confirmationData, error: confirmationError } = await resend.emails.send({
-      from: "Aliaksandr <hello@bykouski.cloud>",
+      from: "Aliaksandr <hello@bykouskidigital.cz>",
       to: [email],
       subject: locale === "cz" ? "Vaše zpráva byla doručena" : "Ваше сообщение доставлено",
       text:

@@ -48,7 +48,7 @@ export async function sendEmail(data: ContactFormInputs, locale?: string) {
     }
 
     return { success: true };
-  } catch (error: any) {
-    return { error: error.message || "Unknown error" };
+  } catch (error: unknown) {
+    return { error: error instanceof Error ? error.message : "Unknown error" };
   }
 }

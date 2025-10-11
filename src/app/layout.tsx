@@ -135,6 +135,7 @@ export default async function RootLayout({
           name="description"
           content="Profesionální služby vývoje webových stránek na míru vašim potřebám. Specializuji se na Next.js, React, CSS a JavaScript pro vytváření moderních a responzivních webů v České republice."
         />
+        <meta name="seznam-wmt" content="QYpIJCr6TxsfvFo0FO6rbKHjOh57x28u" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex min-h-screen flex-col  font-sans text-foreground`}

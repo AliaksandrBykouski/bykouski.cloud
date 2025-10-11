@@ -36,5 +36,5 @@ jobs:
           # host_fingerprint: ${{ secrets.PROD_SSH_FINGERPRINT }} # Optional - uncomment if you have this secret configured
           command: |
             source ~/.nvm/nvm.sh && \
-            cd ~/app && \
+            cd ~/bykouskidigital && \
             ~/deploy.sh

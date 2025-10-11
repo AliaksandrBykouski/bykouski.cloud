@@ -28,7 +28,7 @@ export default function Header({ locale }: { locale: string }) {
           aria-label="Toggle mobile menu"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <title>Menu</title>
+            <title>Webové Studio Bykouski Aliaksandr</title>
             {isMobileMenuOpen ? (
               <path
                 strokeLinecap="round"

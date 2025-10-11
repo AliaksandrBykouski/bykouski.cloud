@@ -2,7 +2,9 @@
 
 import { Resend } from "resend";
 import z from "zod";
-import ContactFormEmail, { ConfirmationEmail } from "@/emails/contact-form-email";
+import ContactFormEmail, {
+  ConfirmationEmail,
+} from "@/emails/contact-form-email";
 import { ContactFormSchema } from "./schemas";
 
 type ContactFormInputs = z.infer<typeof ContactFormSchema>;
@@ -19,7 +21,7 @@ export async function sendEmail(data: ContactFormInputs, locale?: string) {
 
     // Send email to admin
     const { data, error } = await resend.emails.send({
-      from: "Aliaksandr <hello@bykouskidigital.cz>",
+      from: "Aliaksandr <hello@bykouski.cloud>",
       to: ["post@bykouskidigital.cz"],
       replyTo: email,
       subject: `Вам пришло сообщение от ${name}`,
@@ -31,19 +33,26 @@ export async function sendEmail(data: ContactFormInputs, locale?: string) {
     }
 
     // Send confirmation email to sender
-    const { data: confirmationData, error: confirmationError } = await resend.emails.send({
-      from: "Aliaksandr <hello@bykouskidigital.cz>",
-      to: [email],
-      subject: locale === "cz" ? "Vaše zpráva byla doručena" : "Ваше сообщение доставлено",
-      text:
-        locale === "cz"
-          ? `Dobrý den, ${name}!\n\nObdrželi jsme vaši zprávu a brzy vás budeme kontaktovat.\n\nS pozdravem,\nTým Aliaksandr Bykouski`
-          : `Здравствуйте, ${name}!\n\nМы получили ваше сообщение и свяжемся с вами в ближайшее время.\n\nС уважением,\nКоманда Aliaksandr Bykouski`,
-      react: await ConfirmationEmail({ name, locale }),
-    });
+    const { data: confirmationData, error: confirmationError } =
+      await resend.emails.send({
+        from: "Aliaksandr <hello@bykouski.cloud>",
+        to: [email],
+        subject:
+          locale === "cz"
+            ? "Vaše zpráva byla doručena"
+            : "Ваше сообщение доставлено",
+        text:
+          locale === "cz"
+            ? `Dobrý den, ${name}!\n\nObdrželi jsme vaši zprávu a brzy vás budeme kontaktovat.\n\nS pozdravem,\nTým Aliaksandr Bykouski`
+            : `Здравствуйте, ${name}!\n\nМы получили ваше сообщение и свяжемся с вами в ближайшее время.\n\nС уважением,\nКоманда Aliaksandr Bykouski`,
+        react: await ConfirmationEmail({ name, locale }),
+      });
 
     if (!confirmationData || confirmationError) {
-      console.warn("Failed to send confirmation email:", confirmationError?.message);
+      console.warn(
+        "Failed to send confirmation email:",
+        confirmationError?.message
+      );
       // Don't throw error here as the main email was sent successfully
     }
 

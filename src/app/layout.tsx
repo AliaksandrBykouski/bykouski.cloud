@@ -4,7 +4,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 export async function generateMetadata(): Promise<Metadata> {
   return {
     metadataBase: new URL("https://bykouskidigital.cz"),
-    title: "Tvorba webových stránek. Web development Czech Republic | Bykouski Aliaksandr",
+    title:
+      "Tvorba webových stránek. Web development Czech Republic | Bykouski Aliaksandr",
     description:
       "Profesionální služby vývoje webových stránek na míru vašim potřebám. Specializuji se na Next.js, React, CSS a JavaScript pro vytváření moderních a responzivních webů v České republice.",
     keywords:
@@ -12,21 +13,13 @@ export async function generateMetadata(): Promise<Metadata> {
     authors: [{ name: "Aliaksandr Bykouski" }],
     creator: "Aliaksandr Bykouski",
     publisher: "Aliaksandr Bykouski",
-    icons: {
-      icon: [
-        { url: "/favicon.ico" },
-        { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-        { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-      ],
-      apple: "/apple-touch-icon.png",
-    },
-    manifest: "/site.webmanifest",
     formatDetection: {
       telephone: false,
     },
     openGraph: {
       title: "Web Studio Bykouski Aliaksandr",
-      description: "Profesionální služby vývoje webových stránek na míru vašim potřebám.",
+      description:
+        "Profesionální služby vývoje webových stránek na míru vašim potřebám.",
       url: "https://bykouskidigital.cz",
       siteName: "Web Studio Bykouski Aliaksandr",
       type: "website",
@@ -98,7 +91,11 @@ export default async function RootLayout({
     <html lang="cs" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin=""
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex min-h-screen flex-col font-sans text-foreground`}

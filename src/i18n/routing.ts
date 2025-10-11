@@ -8,10 +8,11 @@ export const routing = defineRouting({
   // Used when no locale matches
   defaultLocale: "cz",
 
-  localePrefix: "always",
+  localePrefix: "never",
   localeDetection: false,
 });
 
 // Lightweight wrappers around Next.js' navigation APIs
 // that will consider the routing configuration
-export const { Link, redirect, usePathname, useRouter, getPathname } = createNavigation(routing);
+export const { Link, redirect, usePathname, useRouter, getPathname } =
+  createNavigation(routing);

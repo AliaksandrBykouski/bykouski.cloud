@@ -13,6 +13,15 @@ export async function generateMetadata(): Promise<Metadata> {
     authors: [{ name: "Aliaksandr Bykouski" }],
     creator: "Aliaksandr Bykouski",
     publisher: "Aliaksandr Bykouski",
+    icons: {
+      icon: [
+        { url: "/favicon.ico" },
+        { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+        { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      ],
+      apple: "/apple-touch-icon.png",
+    },
+    manifest: "/site.webmanifest",
     formatDetection: {
       telephone: false,
     },
@@ -55,6 +64,7 @@ export async function generateMetadata(): Promise<Metadata> {
     alternates: {
       canonical: "https://bykouskidigital.cz",
       languages: {
+        cs: "https://bykouskidigital.cz",
         cs: "https://bykouskidigital.cz",
         ru: "https://bykouskidigital.cz/ru",
       },

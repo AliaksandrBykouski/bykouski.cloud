@@ -3,7 +3,11 @@ import { AccordionDemo } from "@/components/Accordion";
 import ContactForm from "@/components/ContactForm";
 import ContactLinks from "@/components/ContactLinks";
 
-export default async function ContactsPage({ params }: { params: Promise<{ locale: string }> }) {
+export default async function ContactsPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
   const { locale } = await params;
   const t = await getTranslations({ locale });
 
@@ -58,7 +62,12 @@ export default async function ContactsPage({ params }: { params: Promise<{ local
   };
 
   return (
-    <section className="pt-4" aria-labelledby="contacts-title">
+    <section
+      className="pt-4"
+      aria-labelledby="contacts-title"
+      aria-describedby="contacts-description"
+      id="contacts"
+    >
       <div className="container ">
         <div className="mb-5 space-y-3">
           <h1
@@ -67,7 +76,10 @@ export default async function ContactsPage({ params }: { params: Promise<{ local
           >
             {t("contacts.title")}
           </h1>
-          <p className="mt-4 md:mt-6 lg:mt-8 font-light text-lg md:text-xl lg:text-2xl text-muted-foreground">
+          <p
+            className="mt-4 md:mt-6 lg:mt-8 font-light text-lg md:text-xl lg:text-2xl text-muted-foreground"
+            id="contacts-description"
+          >
             {t("contacts.description")}
           </p>
         </div>

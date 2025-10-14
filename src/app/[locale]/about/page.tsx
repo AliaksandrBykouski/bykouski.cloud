@@ -1,17 +1,32 @@
 import { getTranslations } from "next-intl/server";
 import TechCards from "@/components/TechCards";
 
-export default async function AboutPage({ params }: { params: Promise<{ locale: string }> }) {
+export default async function AboutPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
   const { locale } = await params;
   const t = await getTranslations({ locale });
 
   return (
-    <section className="min-h-screen bg-background text-foreground flex flex-col mx-auto p-5">
+    <section
+      className="min-h-screen bg-background text-foreground flex flex-col mx-auto p-5"
+      id="about"
+      aria-labelledby="about-title"
+      aria-describedby="about-description"
+    >
       <div className="container animate-appear">
-        <h1 className="title text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-bold leading-tight text-[var(--foreground)] mb-4 lg:mb-5 xl:mb-6">
+        <h1
+          className="title text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-bold leading-tight text-[var(--foreground)] mb-4 lg:mb-5 xl:mb-6"
+          id="about-title"
+        >
           {t("about.title")}
         </h1>
-        <p className="mt-4 md:mt-6 lg:mt-8 font-light text-lg md:text-xl lg:text-2xl text-muted-foreground">
+        <p
+          className="mt-4 md:mt-6 lg:mt-8 font-light text-lg md:text-xl lg:text-2xl text-muted-foreground"
+          id="about-description"
+        >
           {(() => {
             const text = t("about.description");
             const searchText = "Bykouski Digital";

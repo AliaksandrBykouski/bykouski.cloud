@@ -20,6 +20,12 @@ export default function Header({ locale }: { locale: string }) {
       locale === "ru" ? "Услуги" : locale === "cs" ? "Služby" : "Services",
     contacts:
       locale === "ru" ? "Контакты" : locale === "cs" ? "Kontakty" : "Contacts",
+    portfolio:
+      locale === "ru"
+        ? "Портфолио"
+        : locale === "cs"
+          ? "Portfolio"
+          : "Portfolio",
   };
 
   return (
@@ -111,6 +117,12 @@ export default function Header({ locale }: { locale: string }) {
             className="text-m font-medium text-muted-foreground transition-all duration-300 hover:text-foreground hover:scale-105 text-[var(--ring)] hover:text-[var(--foreground)]"
           >
             {labels.contacts}
+          </Link>
+          <Link
+            href="/portfolio"
+            className="text-m font-medium text-muted-foreground transition-all duration-300 hover:text-foreground hover:scale-105 text-[var(--ring)] hover:text-[var(--foreground)]"
+          >
+            {labels.portfolio}
           </Link>
 
           <LanguageSwitcher />

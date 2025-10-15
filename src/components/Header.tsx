@@ -74,12 +74,6 @@ export default function Header({ locale }: { locale: string }) {
           className="hidden md:block text-xl font-bold tracking-tight transition-transform duration-300 hover:scale-105"
           aria-label="Web Studio Bykouski Aliaksandr"
         >
-          {/* <span
-            className="rounded-md bg-primary px-2 py-1 text-background transition-colors duration-300 hover:bg-primary/80"
-            style={{ background: "var(--ring)" }}
-          >
-            BD
-          </span> */}
           <div className="flex items-center gap-2">
             <div
               className="rounded-lg p-2 transition-all duration-300 group-hover:scale-110"

@@ -1,11 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import ServicesCards from "@/components/ServicesCards";
 
-export default async function ServicesPage({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}) {
+export default async function ServicesPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale });
   const translations = {

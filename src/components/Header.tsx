@@ -16,16 +16,9 @@ export default function Header({ locale }: { locale: string }) {
   const labels = {
     home: locale === "ru" ? "Главная" : locale === "cs" ? "Hlavní" : "Main",
     about: locale === "ru" ? "Обо мне" : locale === "cs" ? "O mně" : "About",
-    services:
-      locale === "ru" ? "Услуги" : locale === "cs" ? "Služby" : "Services",
-    contacts:
-      locale === "ru" ? "Контакты" : locale === "cs" ? "Kontakty" : "Contacts",
-    portfolio:
-      locale === "ru"
-        ? "Портфолио"
-        : locale === "cs"
-          ? "Portfolio"
-          : "Portfolio",
+    services: locale === "ru" ? "Услуги" : locale === "cs" ? "Služby" : "Services",
+    contacts: locale === "ru" ? "Контакты" : locale === "cs" ? "Kontakty" : "Contacts",
+    portfolio: locale === "ru" ? "Портфолио" : locale === "cs" ? "Portfolio" : "Portfolio",
   };
 
   return (
@@ -81,19 +74,41 @@ export default function Header({ locale }: { locale: string }) {
           className="hidden md:block text-xl font-bold tracking-tight transition-transform duration-300 hover:scale-105"
           aria-label="Web Studio Bykouski Aliaksandr"
         >
-          <span
+          {/* <span
             className="rounded-md bg-primary px-2 py-1 text-background transition-colors duration-300 hover:bg-primary/80"
             style={{ background: "var(--ring)" }}
           >
             BD
-          </span>
+          </span> */}
+          <div className="flex items-center gap-2">
+            <div
+              className="rounded-lg p-2 transition-all duration-300 group-hover:scale-110"
+              style={{ background: "var(--ring)" }}
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="white"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <title>Bykouski Digital Logo</title>
+                <polyline points="16 18 22 12 16 6" />
+                <polyline points="8 6 2 12 8 18" />
+              </svg>
+            </div>
+            <div className="flex flex-col">
+              <span className="text-sm font-bold text-foreground text-[var(--ring)]">Bykouski</span>
+              <span className="text-[12px] text-muted-foreground text-[var(--ring)]">Digital</span>
+            </div>
+          </div>
         </Link>
 
         {/* Desktop navigation */}
-        <nav
-          className="hidden md:flex items-center gap-4 lg:gap-6"
-          aria-label="Hlavní navigace"
-        >
+        <nav className="hidden md:flex items-center gap-4 lg:gap-6" aria-label="Hlavní navigace">
           <Link
             href="/"
             className="text-m font-medium text-muted-foreground transition-all duration-300 hover:text-foreground hover:scale-105 text-[var(--ring)] hover:text-[var(--foreground)]"
@@ -140,10 +155,7 @@ export default function Header({ locale }: { locale: string }) {
       {isMobileMenuOpen && (
         <div className="md:hidden fixed top-0 left-0 w-full h-screen z-50 bg-[var(--muted)] backdrop-blur-lg container overflow-hidden">
           <div className="w-full h-full flex items-center justify-center">
-            <nav
-              className="flex flex-col space-y-8 text-center"
-              aria-label="Mobilní navigace"
-            >
+            <nav className="flex flex-col space-y-8 text-center" aria-label="Mobilní navigace">
               {Object.entries(labels).map(([key, value]) => (
                 <Link
                   key={key}

@@ -1,10 +1,15 @@
 "use client";
 
-import * as React from "react";
-import Link from "next/link";
 import Autoplay from "embla-carousel-autoplay";
-import FutureTech from "@/assets/FutureTech.png";
 import Image from "next/image";
+import Link from "next/link";
+import * as React from "react";
+import Crossfit from "@/assets/Crossfit.jpg";
+import Estate from "@/assets/Estate.jpg";
+import FutureTech from "@/assets/FutureTech.jpg";
+import IdeaMarket from "@/assets/ideamarket.jpg";
+import ReactCards from "@/assets/ReactCards.jpg";
+import StreamVibe from "@/assets/StreamVibe.jpg";
 
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -14,23 +19,49 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { Loader } from "./Loader";
 
 export function CarouselPlugin() {
-  const plugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: true })
-  );
+  const plugin = React.useRef(Autoplay({ delay: 2000, stopOnInteraction: true }));
 
   const carouselArray = [
     {
       id: 1,
-      title: "FutureTech",
+      title: "Bykouski FutureTech",
       href: "https://alexandrkral.ru/",
       src: FutureTech,
     },
-    { id: 2, title: "Item 2", href: "#", src: "" },
-    { id: 3, title: "Item 3", href: "#", src: "" },
-    { id: 4, title: "Item 4", href: "#", src: "" },
-    { id: 5, title: "Item 5", href: "#", src: "" },
+    {
+      id: 2,
+      title: "IdeaMarket",
+      href: "https://ideamarket.site/",
+      src: IdeaMarket,
+    },
+    {
+      id: 3,
+      title: "Bykouski StreamVibe",
+      href: "http://sub.alexandrkral.ru/",
+      src: StreamVibe,
+    },
+    {
+      id: 4,
+      title: "Bykouski Agency",
+      href: "https://real-estate-three-pearl.vercel.app/",
+      src: Estate,
+    },
+    {
+      id: 5,
+      title: "Bykouski Fitness",
+      href: "http://sub1.alexandrkral.ru/",
+      src: Crossfit,
+    },
+    {
+      id: 6,
+      title: "React Cards",
+      href: "https://reactcards-qor7.onrender.com/",
+      src: ReactCards,
+    },
+    { id: 10, title: "More projects coming soon...", href: "#", src: "" },
   ];
 
   return (
@@ -41,13 +72,12 @@ export function CarouselPlugin() {
       onMouseLeave={plugin.current.reset}
     >
       <CarouselContent>
-        {carouselArray
-          .filter((item) => item.src)
-          .map((item) => (
-            <CarouselItem key={item.id}>
-              <div className="p-1">
-                <Card className="w-full border-2 border-[var(--ring)] p-0 ">
-                  <CardContent className="flex aspect-square items-center justify-center p-0">
+        {carouselArray.map((item) => (
+          <CarouselItem key={item.id}>
+            <div className="p-1">
+              <Card className="w-full border-2 border-[var(--ring)] p-0 ">
+                <CardContent className="relative flex aspect-square items-center justify-center p-0">
+                  {item.src ? (
                     <Link
                       href={item.href}
                       target="_blank"
@@ -55,7 +85,7 @@ export function CarouselPlugin() {
                       className="relative w-full h-full"
                     >
                       <Image
-                        src={item.src as string}
+                        src={item.src}
                         alt={item.title}
                         priority
                         className="rounded-xl w-full h-full"
@@ -64,11 +94,19 @@ export function CarouselPlugin() {
                         {item.title}
                       </span>
                     </Link>
-                  </CardContent>
-                </Card>
-              </div>
-            </CarouselItem>
-          ))}
+                  ) : (
+                    <>
+                      <Loader />
+                      <span className="absolute bottom-2 left-2 bg-black/50 px-2 py-1 rounded text-sm font-medium text-[var(--ring)]">
+                        Updating...
+                      </span>
+                    </>
+                  )}
+                </CardContent>
+              </Card>
+            </div>
+          </CarouselItem>
+        ))}
       </CarouselContent>
       <CarouselPrevious className="cursor-pointer text-[var(--ring)] hover:text-[var(--ring)]/80" />
       <CarouselNext className="cursor-pointer text-[var(--ring)] hover:text-[var(--ring)]/80" />

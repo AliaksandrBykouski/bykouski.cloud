@@ -3,11 +3,7 @@ import { AccordionDemo } from "@/components/Accordion";
 import ContactForm from "@/components/ContactForm";
 import ContactLinks from "@/components/ContactLinks";
 
-export default async function ContactsPage({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}) {
+export default async function ContactsPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale });
 

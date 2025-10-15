@@ -1,11 +1,7 @@
-import { CarouselPlugin } from "@/components/Carousel";
 import { getTranslations } from "next-intl/server";
+import { CarouselPlugin } from "@/components/Carousel";
 
-export default async function PortfolioPage({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}) {
+export default async function PortfolioPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale });
 

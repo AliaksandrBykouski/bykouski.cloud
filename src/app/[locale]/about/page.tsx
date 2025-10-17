@@ -1,7 +1,11 @@
 import { getTranslations } from "next-intl/server";
 import TechCards from "@/components/TechCards";
 
-export default async function AboutPage({ params }: { params: Promise<{ locale: string }> }) {
+export default async function AboutPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
   const { locale } = await params;
   const t = await getTranslations({ locale });
 
@@ -41,7 +45,6 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
             return text;
           })()}
         </p>
-        {/* <h2 className="title mb-4 text-3xl">{t("about.steck")}</h2> */}
 
         {/* Technologies Section */}
         <div className="mt-5 ">

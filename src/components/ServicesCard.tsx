@@ -21,7 +21,7 @@ export default function ServicesCard({
   icon?: LucideIcon;
 }) {
   return (
-    <Card>
+    <Card className="w-full hover:scale-105 transition-transform border-border border-[var(--ring)] bg-background/80 backdrop-blur">
       <CardHeader>
         <CardTitle className="text-3xl">{title}</CardTitle>
         <CardAction>
@@ -36,7 +36,10 @@ export default function ServicesCard({
         <p>{content}</p>
       </CardContent>
       <CardFooter>
-        <Link className="text-m font-medium hover:underline text-[var(--ring)]" href="/contacts">
+        <Link
+          className="text-m font-medium hover:underline text-[var(--ring)]"
+          href="/contacts"
+        >
           {footer}
         </Link>
       </CardFooter>

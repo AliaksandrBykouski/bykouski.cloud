@@ -16,16 +16,9 @@ export default function Header({ locale }: { locale: string }) {
   const labels = {
     home: locale === "ru" ? "Главная" : locale === "cs" ? "Hlavní" : "Main",
     about: locale === "ru" ? "Обо мне" : locale === "cs" ? "O mně" : "About",
-    services:
-      locale === "ru" ? "Услуги" : locale === "cs" ? "Služby" : "Services",
-    contacts:
-      locale === "ru" ? "Контакты" : locale === "cs" ? "Kontakty" : "Contacts",
-    portfolio:
-      locale === "ru"
-        ? "Портфолио"
-        : locale === "cs"
-          ? "Portfolio"
-          : "Portfolio",
+    services: locale === "ru" ? "Услуги" : locale === "cs" ? "Služby" : "Services",
+    contacts: locale === "ru" ? "Контакты" : locale === "cs" ? "Kontakty" : "Contacts",
+    portfolio: locale === "ru" ? "Портфолио" : locale === "cs" ? "Portfolio" : "Portfolio",
   };
 
   return (
@@ -102,21 +95,14 @@ export default function Header({ locale }: { locale: string }) {
               </svg>
             </div>
             <div className="flex flex-col">
-              <span className="text-sm font-bold text-foreground text-[var(--ring)]">
-                Bykouski
-              </span>
-              <span className="text-[12px] text-muted-foreground text-[var(--ring)]">
-                Digital
-              </span>
+              <span className="text-sm font-bold text-foreground text-[var(--ring)]">Bykouski</span>
+              <span className="text-[12px] text-muted-foreground text-[var(--ring)]">Digital</span>
             </div>
           </div>
         </Link>
 
         {/* Desktop navigation */}
-        <nav
-          className="hidden md:flex items-center gap-4 lg:gap-6"
-          aria-label="Hlavní navigace"
-        >
+        <nav className="hidden md:flex items-center gap-4 lg:gap-6" aria-label="Hlavní navigace">
           <Link
             href="/"
             className="text-m font-medium text-muted-foreground transition-all duration-300 hover:text-foreground hover:scale-105 text-[var(--ring)] hover:text-[var(--foreground)]"
@@ -165,10 +151,7 @@ export default function Header({ locale }: { locale: string }) {
           style={{ backgroundColor: "var(--accent)" }}
         >
           <div className="container w-full h-full flex items-center justify-center">
-            <nav
-              className="flex flex-col space-y-8 text-start"
-              aria-label="Mobilní navigace"
-            >
+            <nav className="flex flex-col space-y-8 text-start" aria-label="Mobilní navigace">
               {Object.entries(labels).map(([key, value]) => (
                 <Link
                   key={key}

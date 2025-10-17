@@ -1,11 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import TechCards from "@/components/TechCards";
 
-export default async function AboutPage({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}) {
+export default async function AboutPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale });
 

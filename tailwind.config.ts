@@ -24,14 +24,8 @@ const config: Config = {
     },
     extend: {
       fontFamily: {
-        sans: [
-          "var(--font-geist-sans)",
-          ...require("tailwindcss/defaultTheme").fontFamily.sans,
-        ],
-        serif: [
-          "var(--font-geist-serif)",
-          ...require("tailwindcss/defaultTheme").fontFamily.serif,
-        ],
+        sans: ["var(--font-geist-sans)", ...require("tailwindcss/defaultTheme").fontFamily.sans],
+        serif: ["var(--font-geist-serif)", ...require("tailwindcss/defaultTheme").fontFamily.serif],
       },
       colors: {
         background: "hsl(var(--background))",

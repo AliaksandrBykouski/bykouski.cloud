@@ -4,14 +4,14 @@ import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 import Link from "next/link";
 import * as React from "react";
+
 import Crossfit from "@/assets/Crossfit.jpg";
 import Estate from "@/assets/Estate.jpg";
+import FitPro from "@/assets/FitPro.jpg";
 import FutureTech from "@/assets/FutureTech.jpg";
 import IdeaMarket from "@/assets/ideamarket.jpg";
 import ReactCards from "@/assets/ReactCards.jpg";
 import StreamVibe from "@/assets/StreamVibe.jpg";
-import FitPro from "@/assets/FitPro.jpg";
-
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
@@ -23,9 +23,7 @@ import {
 import { Loader } from "./Loader";
 
 export function CarouselPlugin() {
-  const plugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: true })
-  );
+  const plugin = React.useRef(Autoplay({ delay: 2000, stopOnInteraction: true }));
 
   const carouselArray = [
     {

@@ -22,7 +22,9 @@ import {
 import { Loader } from "./Loader";
 
 export function CarouselPlugin() {
-  const plugin = React.useRef(Autoplay({ delay: 2000, stopOnInteraction: true }));
+  const plugin = React.useRef(
+    Autoplay({ delay: 2000, stopOnInteraction: true })
+  );
 
   const carouselArray = [
     {
@@ -73,9 +75,9 @@ export function CarouselPlugin() {
     >
       <CarouselContent>
         {carouselArray.map((item) => (
-          <CarouselItem key={item.id}>
+          <CarouselItem key={item.id} className="group cursor-pointer">
             <div className="p-1">
-              <Card className="w-full border-2 border-[var(--ring)] p-0 ">
+              <Card className="w-full border-2 border-[var(--ring)] p-0 transition-shadow duration-300 hover:shadow-2xl">
                 <CardContent className="relative flex aspect-square items-center justify-center p-0">
                   {item.src ? (
                     <Link
@@ -88,7 +90,7 @@ export function CarouselPlugin() {
                         src={item.src}
                         alt={item.title}
                         priority
-                        className="rounded-xl w-full h-full"
+                        className="rounded-xl w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                       />
                       <span className="absolute bottom-2 left-2 bg-black/50 px-2 py-1 rounded text-sm font-medium text-[var(--ring)]">
                         {item.title}

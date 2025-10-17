@@ -3,11 +3,12 @@ import { Geist, Geist_Mono } from "next/font/google";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://bykouskidigital.cz"),
-  title: "Web Studio Bykouski Aliaksandr | Tvorba webových stránek",
+  title:
+    "Web Studio Bykouski Aliaksandr | Tvorba webových stránek na míru | Česká republika",
   description:
-    "Profesionální služby vývoje webových stránek na míru vašim potřebám. Specializuji se na Next.js, React, CSS a JavaScript pro vytváření moderních a responzivních webů v České republice.",
+    "Profesionální služby vývoje webových stránek na míru vašim potřebám. Specializuji se na výrobu webů v České republice.",
   keywords:
-    "web development, tvorba webových stránek, webové stránky, aplikace, Next.js, React, CSS, JavaScript, portfolio, Česká republika, Praha",
+    "web development, tvorba webových stránek, webové stránky, aplikace, Česká republika, Praha, Next.js, React, CSS, JavaScript, portfolio, služby, bykouski, bykouskidigital",
   authors: [{ name: "Aliaksandr Bykouski" }],
   creator: "Aliaksandr Bykouski",
   publisher: "Aliaksandr Bykouski",
@@ -24,8 +25,10 @@ export const metadata: Metadata = {
     telephone: false,
   },
   openGraph: {
-    title: "Web Studio Bykouski Aliaksandr",
-    description: "Profesionální služby vývoje webových stránek na míru vašim potřebám.",
+    title:
+      "Web Studio Bykouski Aliaksandr | Tvorba webových stránek na míru | Česká republika",
+    description:
+      "Profesionální služby vývoje webových stránek na míru vašim potřebám.",
     url: "https://bykouskidigital.cz",
     siteName: "Web Studio Bykouski Aliaksandr",
     type: "website",
@@ -96,7 +99,11 @@ export default function RootLayout({
     <html lang="cs" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin=""
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex min-h-screen flex-col font-sans text-foreground`}

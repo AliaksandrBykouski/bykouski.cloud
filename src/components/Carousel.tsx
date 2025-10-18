@@ -23,9 +23,7 @@ import {
 import { Loader } from "./Loader";
 
 export function CarouselPlugin() {
-  const plugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: true })
-  );
+  const plugin = React.useRef(Autoplay({ delay: 2000, stopOnInteraction: true }));
 
   const carouselArray = [
     {

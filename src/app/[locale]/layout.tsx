@@ -1,5 +1,5 @@
+import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
-import { Metadata } from "next";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -8,8 +8,7 @@ import "./globals.css";
 import { getMessages } from "next-intl/server";
 
 export const metadata: Metadata = {
-  title:
-    "Web Studio Bykouski Aliaksandr | Tvorba webových stránek na míru | Česká republika",
+  title: "Web Studio Bykouski Aliaksandr | Tvorba webových stránek na míru | Česká republika",
   description:
     "Profesionální služby vývoje webových stránek na míru vašim potřebám. Specializuji se na výrobu webů v České republice.",
   keywords:
@@ -30,10 +29,8 @@ export const metadata: Metadata = {
     telephone: false,
   },
   openGraph: {
-    title:
-      "Web Studio Bykouski Aliaksandr | Tvorba webových stránek na míru | Česká republika",
-    description:
-      "Profesionální služby vývoje webových stránek na míru vašim potřebám.",
+    title: "Web Studio Bykouski Aliaksandr | Tvorba webových stránek na míru | Česká republika",
+    description: "Profesionální služby vývoje webových stránek na míru vašim potřebám.",
     url: "https://bykouskidigital.cz",
     siteName: "Web Studio Bykouski Aliaksandr",
     type: "website",
@@ -89,12 +86,7 @@ export default async function LocalLayout({
   const messages = await getMessages({ locale });
 
   return (
-    <ThemeProvider
-      attribute="class"
-      defaultTheme="dark"
-      enableSystem
-      disableTransitionOnChange
-    >
+    <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
       <NextIntlClientProvider locale={locale} messages={messages}>
         <div className="flex min-h-screen flex-col">
           <div className="container mx-auto w-full px-4  flex-1 flex flex-col">

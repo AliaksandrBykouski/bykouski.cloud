@@ -33,4 +33,4 @@ jobs:
           user: ${{ secrets.PROD_SSH_USERNAME }}
           private_key: ${{ secrets.PROD_SSH_PRIVATE_KEY }}
           command: |
-            bash -c 'source ~/.nvm/nvm.sh && cd ~/bykouskidigital && git fetch origin && git reset --hard origin/release && pnpm install && pnpm run build && npx pm2 reload all'
+            bash -c 'source ~/.nvm/nvm.sh && cd ~/bykouskidigital && git fetch origin && git reset --hard origin/release && pnpm install && NODE_OPTIONS="--max-old-space-size=2048" pnpm run build && npx pm2 reload all'

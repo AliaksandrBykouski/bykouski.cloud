@@ -21,9 +21,25 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Loader } from "./Loader";
+import { useEffect, useState } from "react";
+import { is } from "zod/v4/locales";
 
 export function CarouselPlugin() {
-  const plugin = React.useRef(Autoplay({ delay: 2000, stopOnInteraction: true }));
+  const plugin = React.useRef(
+    Autoplay({ delay: 2000, stopOnInteraction: true })
+  );
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const checkDesktop = () => {
+      setIsDesktop(window.innerWidth >= 1024);
+    };
+
+    checkDesktop();
+    window.addEventListener("resize", checkDesktop);
+
+    return () => window.removeEventListener("resize", checkDesktop);
+  }, []);
 
   const carouselArray = [
     {
@@ -88,9 +104,9 @@ export function CarouselPlugin() {
     <div className="w-full flex justify-center px-6 sm:px-7 lg:px-8">
       <Carousel
         className="w-full max-w-7xl flex items-center justify-center mt-8 sm:mt-12 md:mt-16 lg:mt-20 xl:mt-24"
-        plugins={[plugin.current]}
-        onMouseEnter={plugin.current.stop}
-        onMouseLeave={plugin.current.reset}
+        plugins={isDesktop ? [plugin.current] : []}
+        onMouseEnter={isDesktop ? plugin.current.stop : undefined}
+        onMouseLeave={isDesktop ? plugin.current.reset : undefined}
       >
         <CarouselContent className="-ml-3 sm:-ml-4 md:-ml-6">
           {carouselArray.map((item, index) => (

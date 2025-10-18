@@ -4,7 +4,7 @@ import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 import Link from "next/link";
 import * as React from "react";
-
+import { useEffect, useState } from "react";
 import Crossfit from "@/assets/Crossfit.jpg";
 import Estate from "@/assets/Estate.jpg";
 import FitPro from "@/assets/FitPro.jpg";
@@ -21,13 +21,9 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Loader } from "./Loader";
-import { useEffect, useState } from "react";
-import { is } from "zod/v4/locales";
 
 export function CarouselPlugin() {
-  const plugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: true })
-  );
+  const plugin = React.useRef(Autoplay({ delay: 2000, stopOnInteraction: true }));
   const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {

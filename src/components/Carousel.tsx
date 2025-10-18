@@ -23,7 +23,9 @@ import {
 import { Loader } from "./Loader";
 
 export function CarouselPlugin() {
-  const plugin = React.useRef(Autoplay({ delay: 2000, stopOnInteraction: true }));
+  const plugin = React.useRef(
+    Autoplay({ delay: 2000, stopOnInteraction: true })
+  );
   const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
@@ -146,8 +148,8 @@ export function CarouselPlugin() {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="cursor-pointer text-[var(--ring)] hover:text-[var(--foreground)] -left-10 sm:-left-12 border-[var(--ring)] hover:border-[var(--foreground)] hover:scale-110" />
-        <CarouselNext className="cursor-pointer text-[var(--ring)] hover:text-[var(--foreground)] -right-10 sm:-right-12 border-[var(--ring)] hover:border-[var(--foreground)] hover:scale-110" />
+        <CarouselPrevious className="hidden lg:flex cursor-pointer text-[var(--ring)] hover:text-[var(--foreground)] -left-10 sm:-left-12 border-[var(--ring)] hover:border-[var(--foreground)] hover:scale-110" />
+        <CarouselNext className="hidden lg:flex cursor-pointer text-[var(--ring)] hover:text-[var(--foreground)] -right-10 sm:-right-12 border-[var(--ring)] hover:border-[var(--foreground)] hover:scale-110" />
       </Carousel>
     </div>
   );

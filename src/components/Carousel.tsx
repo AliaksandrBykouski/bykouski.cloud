@@ -99,9 +99,9 @@ export function CarouselPlugin() {
   ];
 
   return (
-    <div className="w-full flex justify-center px-6 sm:px-7 lg:px-8">
+    <div className="w-full flex justify-center mx-auto px-4 sm:px-7 lg:px-8">
       <Carousel
-        className="w-full max-w-7xl flex items-center justify-center mt-8 sm:mt-12 md:mt-16 lg:mt-20 xl:mt-24"
+        className="hidden w-full max-w-7xl lg:flex items-center justify-center mt-8 sm:mt-12 md:mt-16 lg:mt-20 xl:mt-24"
         plugins={isDesktop ? [plugin.current] : []}
         onMouseEnter={isDesktop ? plugin.current.stop : undefined}
         onMouseLeave={isDesktop ? plugin.current.reset : undefined}
@@ -148,9 +148,47 @@ export function CarouselPlugin() {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="hidden lg:flex cursor-pointer text-[var(--ring)] hover:text-[var(--foreground)] -left-10 sm:-left-12 border-[var(--ring)] hover:border-[var(--foreground)] hover:scale-110" />
-        <CarouselNext className="hidden lg:flex cursor-pointer text-[var(--ring)] hover:text-[var(--foreground)] -right-10 sm:-right-12 border-[var(--ring)] hover:border-[var(--foreground)] hover:scale-110" />
+        <CarouselPrevious className="cursor-pointer text-[var(--ring)] hover:text-[var(--foreground)] -left-10 sm:-left-12 border-[var(--ring)] hover:border-[var(--foreground)] hover:scale-110" />
+        <CarouselNext className="cursor-pointer text-[var(--ring)] hover:text-[var(--foreground)] -right-10 sm:-right-12 border-[var(--ring)] hover:border-[var(--foreground)] hover:scale-110" />
       </Carousel>
+
+      <div className="grid grid-cols-1 lg:hidden mt-8 sm:mt-12 md:mt-16 lg:mt-20 xl:mt-24">
+        {carouselArray.map((item, index) => (
+          <div key={item.id} className="p-2 sm:p-3 md:p-4">
+            <Card className="w-full max-w-md border-2 border-[var(--ring)] p-0 mx-auto mb-6">
+              <CardContent className="relative flex aspect-square items-center justify-center p-0">
+                {item.src ? (
+                  <Link
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="relative w-full h-full"
+                  >
+                    <Image
+                      src={item.src}
+                      alt={item.alt}
+                      priority={index <= 3}
+                      loading={index <= 3 ? "eager" : "lazy"}
+                      fetchPriority={index === 0 ? "high" : "auto"}
+                      className="rounded-xl w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                    />
+                    <span className="absolute bottom-2 left-2 bg-black/50 px-2 py-1 rounded text-sm font-medium text-[var(--ring)]">
+                      {item.title}
+                    </span>
+                  </Link>
+                ) : (
+                  <>
+                    <Loader />
+                    <span className="absolute bottom-2 left-2 bg-black/50 px-2 py-1 rounded text-sm font-medium text-[var(--ring)]">
+                      {item.title}
+                    </span>
+                  </>
+                )}
+              </CardContent>
+            </Card>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

@@ -1,7 +1,11 @@
 import { getTranslations } from "next-intl/server";
 import { CarouselPlugin } from "@/components/Carousel";
 
-export default async function PortfolioPage({ params }: { params: Promise<{ locale: string }> }) {
+export default async function PortfolioPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
   const { locale } = await params;
   const t = await getTranslations({ locale });
 
@@ -24,9 +28,7 @@ export default async function PortfolioPage({ params }: { params: Promise<{ loca
         >
           {t("portfolio.subtitle")}
         </p>
-        <div className="mt-5 mx-auto w-fit">
-          <CarouselPlugin />
-        </div>
+        <CarouselPlugin />
       </div>
     </section>
   );

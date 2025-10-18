@@ -23,7 +23,9 @@ import {
 import { Loader } from "./Loader";
 
 export function CarouselPlugin() {
-  const plugin = React.useRef(Autoplay({ delay: 2000, stopOnInteraction: true }));
+  const plugin = React.useRef(
+    Autoplay({ delay: 2000, stopOnInteraction: true })
+  );
 
   const carouselArray = [
     {
@@ -31,44 +33,57 @@ export function CarouselPlugin() {
       title: "Bykouski FutureTech",
       href: "https://alexandrkral.ru/",
       src: FutureTech,
+      alt: "Preview moderní webové aplikace FutureTech",
     },
     {
       id: 2,
       title: "IdeaMarket",
       href: "https://ideamarket.site/",
       src: IdeaMarket,
+      alt: "Náhled platformy IdeaMarket pro sdílení nápadů",
     },
     {
       id: 3,
       title: "Bykouski StreamVibe",
       href: "http://sub.alexandrkral.ru/",
       src: StreamVibe,
+      alt: "Screenshot streamovací služby StreamVibe",
     },
     {
       id: 4,
       title: "Bykouski Agency",
       href: "https://real-estate-three-pearl.vercel.app/",
       src: Estate,
+      alt: "Webová stránka realitní agentury",
     },
     {
       id: 5,
       title: "Bykouski Fitness",
       href: "http://sub1.alexandrkral.ru/",
       src: Crossfit,
+      alt: "Web fitness centra s crossfit programy",
     },
     {
       id: 6,
       title: "React Cards",
       href: "https://reactcards-qor7.onrender.com/",
       src: ReactCards,
+      alt: "Interaktivní React aplikace s kartami",
     },
     {
       id: 7,
       title: "Bykouski FitPro",
       href: "https://fit-pro-five.vercel.app/",
       src: FitPro,
+      alt: "Aplikace FitPro pro sledování fitness cílů",
     },
-    { id: 10, title: "More projects coming soon...", href: "#", src: "" },
+    {
+      id: 10,
+      title: "More projects coming soon...",
+      href: "#",
+      src: "",
+      alt: "Místo pro budoucí projekty",
+    },
   ];
 
   return (
@@ -80,7 +95,7 @@ export function CarouselPlugin() {
         onMouseLeave={plugin.current.reset}
       >
         <CarouselContent className="-ml-3 sm:-ml-4 md:-ml-6">
-          {carouselArray.map((item) => (
+          {carouselArray.map((item, index) => (
             <CarouselItem
               key={item.id}
               className="group cursor-pointer pl-2 sm:pl-3 md:pl-5 basis-full sm:basis-1/2 md:basis-1/2 lg:basis-1/3"
@@ -97,9 +112,10 @@ export function CarouselPlugin() {
                       >
                         <Image
                           src={item.src}
-                          alt={item.title}
-                          priority={item.id <= 3}
-                          loading={item.id <= 3 ? "eager" : "lazy"}
+                          alt={item.alt}
+                          priority={index <= 3}
+                          loading={index <= 3 ? "eager" : "lazy"}
+                          fetchPriority={index === 0 ? "high" : "auto"}
                           className="rounded-xl w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                         />
                         <span className="absolute bottom-2 left-2 bg-black/50 px-2 py-1 rounded text-sm font-medium text-[var(--ring)]">
